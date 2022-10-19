@@ -1,0 +1,141 @@
+\documentclass{bmcart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% CARGA DE PAQUETES DE LATEX               %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\usepackage{graphicx}
+%\RequirePackage[numbers]{natbib}
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% COMIENZO DEL DOCUMENTO                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+	\begin{frontmatter}
+	
+		\begin{fmbox}
+			\dochead{Biología de Sistemas}
+			
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%% INTRODUCIR TITULO PROYECTO               %%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+			\title{Trombosis Arterial}
+			
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%% AUTORES. METER UNA ENTRADA AUTHOR        %%
+			%% POR PERSONA                              %%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+			\author[
+			  addressref={aff1},                   % ESTA LINEA SE COPIA IGUAL PARA CADA AUTOR
+			  corref={aff1},                       % ESTA LINEA SOLO DEBE TENERLA EL COORDINADOR DEL GRUPO
+			  email={pablomolinasanchez01@uma.es}   % VUESTRO CORREO ACTIVO
+			]{\inits{P.M.S}\fnm{Pablo} \snm{Molina Sánchez}} % inits: INICIALES DE AUTOR, fnm: NOMBRE DE AUTOR, snm: APELLIDOS DE AUTOR
+			\author[
+			  addressref={aff1},
+			  email={hugoavalos@uma.es}
+			]{\inits{H.A.R}\fnm{Hugo} \snm{Ávalos de Rorthais}}
+			
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%% AFILIACION. NO TOCAR                     %%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+			\address[id=aff1]{%                           % unique id
+			  \orgdiv{ETSI Informática},             % department, if any
+			  \orgname{Universidad de Málaga},          % university, etc
+			  \city{Málaga},                              % city
+			  \cny{España}                                    % country
+			}
+		
+		\end{fmbox}% comment this for two column layout
+		
+		\begin{abstractbox}
+		
+			\begin{abstract} % abstract
+			Artículo en el que explicamos la trombosis arterial, desde la breve descripción de la enfermedad hasta la investigación de los mecanismos moleculares subyacentes a la enfermedad. Para ello hemos utilizado un HPO (0004420) explicando a nivel de gen cuáles intervienen en el desarrollo de la enfermedad
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%% RESUMEN BREVE DE NO MAS DE 100 PALABRAS   %%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+			
+			\end{abstract}
+			
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%% PALABRAS CLAVE DEL PROYECTO              %%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+			\begin{keyword}
+			\kwd{gen}
+			\kwd{enfermedad}
+			\kwd{mecanismo molecular}
+			\end{keyword}
+		
+		
+		\end{abstractbox}
+	
+	\end{frontmatter}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% EJEMPLO DE LATEX %%                                                                %%
+	%% BORRAR ANTES DE ENTREGAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!              %%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	
+	\section*{Introducción}
+	\input{tex_files/introduction.tex}
+	\section*{Materiales y métodos}
+	\input{tex_files/material_methods.tex}
+	\section*{Resultados}
+	\input{tex_files/resultados.tex}
+	\section*{Siscusión}
+	\input{tex_files/discusion.tex}
+	\section*{Conclusión}
+	\input{tex_files/conclusiones.tex}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% COMIENZO DEL DOCUMENTO REAL %%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% OTRA INFORMACIÓN                         %%
+	%%%%%%%%%%	}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{backmatter}
+	
+		\section*{Abreviaciones}%% if any
+			Indicar lista de abreviaciones mostrando cada acrónimo a que corresponde
+		
+		\section*{Disponibilidad de datos y materiales}%% if any
+			Debéis indicar aquí un enlace a vuestro repositorio de github.
+		
+		\section*{Contribución de los autores}
+			Usando las iniciales que habéis definido al comienzo del documento, debeis indicar la contribución al proyecto en el estilo:
+			J.E : Encargado del análisis de coexpresión con R, escritura de resultados; J.R.S : modelado de red con python y automatizado del código, escritura de métodos; ...
+			OJO: que sea realista con los registros que hay en vuestros repositorios de github. 
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% BIBLIOGRAFIA: no teneis que tocar nada, solo sustituir el archivo bibliography.bib %%
+		%% por el que hayais generado vosotros                                                %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\bibliographystyle{bmc-mathphys} % Style BST file (bmc-mathphys, vancouver, spbasic).
+		\bibliography{bibliograph.bib}      % Bibliography file (usually '*.bib' )
+	
+	\end{backmatter}
+\end{document}
