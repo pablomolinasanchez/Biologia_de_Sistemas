@@ -1,0 +1,155 @@
+---
+title: "Análisis con iGraph de los genes involucrados en la Trombosis Arterial"
+author: "Pablo Molina Sánchez y Hugo Ávalos de Rorthais"
+date: "`r format(Sys.time(), '%A %d, %B %Y. %H.%M.%S')`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    fig_caption: yes
+    number_sections: yes
+    theme: journal
+    df_print: paged
+  pdf_document:
+    toc: yes
+    fig_caption: yes
+    df_print: kable
+---
+# Librerías y Path{.tabset}
+## Librerías
+```{r, warning=FALSE,message=FALSE}
+library(DOSE)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(devtools)
+library(dplyr)
+library(igraph)
+```
+##Path
+```{r}
+path<-"/home/pamosa/Documentos/" #select your path
+setwd(path)
+```
+# Creación del grafo{.tabset}
+```{r}
+library(igraph)
+nodes<-read.csv("string_node_degrees.tsv",sep ="")
+links<-read.csv("string_interactions.tsv",sep="")
+net <- graph_from_data_frame(d=links,vertices=nodes, directed=T)
+```
+## Genes involucrados y sus iteracciones
+```{r}
+V(net)$size<-V(net)$node_degree
+plot(net,layout=layout_nicely, edge.arrow.size=0.2, edge.curved=0.1, vertex.frame.color="black",vertex.label=V(net)$id, vertex.label.color="black", vertex.label.cex=0.7)
+```
+## ¿Cuál es su matriz de adyacencia?
+```{r}
+adjacency_matrix <- as_adj(net)
+adjacency_matrix
+```
+## ¿Es un grafo simétrico?
+```{r}
+isSymmetric(as.matrix(adjacency_matrix))
+```
+## ¿Es un grafo pesado?
+```{r}
+is.weighted(net)
+```
+## ¿Están todos los genes interaccionando entre sí?
+```{r}
+is.connected(net)
+```
+
+## ¿Cuál es la distancia media entre los genes?
+```{r}
+mean_distance(net, directed=F)
+```
+Es un valor bastante bajo, por lo que podemos determinar que está altamente conectado
+
+## ¿Cuál es el gen con más grado y, por tanto, con más conexiones y más relevante para la trombosis arterial?
+```{r}
+degreeMax<-max(V(net)$node_degree)
+V(net)$name[V(net)$node_degree==degreeMax]
+```
+
+Vemos que el IL10 es el gen con más grado y por tanto más importante
+
+## ¿Con qué gen guarda mayor relación IL10?
+```{r}
+news.path <- shortest_paths(net, from = V(net), to  = 'IL10',output = "both")
+ecol <- rep("gray80", ecount(net))
+ecol[unlist(news.path$epath)] <- "orange"
+ew <- rep(2, ecount(net))
+ew[unlist(news.path$epath)] <- 4
+vcol <- rep("gray40", vcount(net))
+vcol[unlist(news.path$vpath)] <- "gold"
+plot(net,layout=layout_nicely, vertex.color=vcol, edge.color=ecol, edge.width=ew, edge.arrow.mode=0)
+```
+El gen que guarda mayor relación con IL10 es AKT1
+
+
+## ¿Es libre de escala?
+```{r}
+scale_freeness<-function(net){
+  d <- degree(net, mode="in")
+  fit1 <- fit_power_law(d, 1,implementation = 'plfit')
+  if(fit1$alpha<=3 && fit1$alpha>=2){
+    return("Es libre de escala")
+  }else{
+    return("No es libre de escala")
+  }
+}
+scale_freeness(net)
+```
+El grafo no es libre de escala, ya que, como hemos podido observar anteriormente, está altamente conectado entre sus nodos.
+
+## ¿Qué comunidades presenta nuestro conjunto de genes?
+Acontinuación, observamos las comunidades funcionales de genes que intervienen en la trombosis arterial.
+```{r}
+community <- cluster_edge_betweenness(net)
+dendPlot(community, mode="hclust")
+plot(community, net,layout=layout_nicely ,edge.arrow.size=0.2, edge.curved=0.1, vertex.frame.color="black",vertex.label=V(net)$id, vertex.label.color="black", vertex.label.cex=0.7)
+length(community)
+membership(community)
+```
+Como podemos ver, hay dos comunidades principales que engloban a gran mayoría de genes, una tercera que involucra a tres genes y oco comunidades restantes ocupadas por un gen cada una.
+
+# Enriquecimientos de las comunidades{.tabset}
+## Función para el enriquecimiento de los procesos biológicos con GO
+```{r}
+data(geneList, package="DOSE")
+overrep_enrichment_GO <- function(gene,universe,Db, ont, pAdjustMethod, p,q) {
+  ego <- enrichGO(gene          = gene,
+                  universe      = universe,
+                  OrgDb         = Db,
+                  ont           = ont,
+                  pAdjustMethod = pAdjustMethod,
+                  pvalueCutoff  = p,
+                  qvalueCutoff  = q,
+                  readable      = TRUE)
+
+  return (ego)
+}
+```
+
+## Comunidad IL10, AKT1, IFNGR1, IL23R, PTEN,  PTPN22, STAT4, TP53  
+```{r}
+community_1<-community[1]
+
+# introducimos sus ids
+community_1_id<-list(3586,207,3459,149233,5728,26191,6775,7157)
+
+go_1<-overrep_enrichment_GO(community_1_id,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_1)
+```
+
+## Comunidad CALR, JAK2, MPL, SH2B3, TET2, THPO
+```{r}
+community_3<-community[3]
+
+# introducimos sus ids
+community_3_id<-list(811,3717, 4352,10019,54790,7066)
+
+go_3<-overrep_enrichment_GO(community_3_id,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_3)
+```
