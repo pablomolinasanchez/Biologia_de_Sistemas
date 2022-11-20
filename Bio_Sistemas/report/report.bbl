@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{0}
+\begin{thebibliography}{3}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -42,6 +42,40 @@
 \ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
 \csname PreBibitemsHook\endcsname
 
+%%% 1
+\bibitem{Trombosis_Bayer}
+\begin{botherref}
+\oauthor{\bsnm{AG}, \binits{B.}}:
+Trombosis Arterial.
+\url{https://www.thrombosisadviser.com/es/professionals/base-de-conocimientos/fundamentos/trombosis-arterial}
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem{Aterosclerosis_inflamacion}
+\begin{botherref}
+\oauthor{\bsnm{Zhu}, \binits{Y.}},
+\oauthor{\bsnm{Xian}, \binits{X.}},
+\oauthor{\bsnm{Wang}, \binits{Z.}},
+\oauthor{\bsnm{Bi}, \binits{Y.}},
+\oauthor{\bsnm{Chen}, \binits{Q.}},
+\oauthor{\bsnm{Han}, \binits{X.}},
+\oauthor{\bsnm{Tang}, \binits{D.}},
+\oauthor{\bsnm{Chen}, \binits{R.}}:
+Research Progress on the Relationship Between Atherosclerosis and Inflammation.
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163673/}
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem{Triada_Virchow}
+\begin{botherref}
+\oauthor{\bsnm{Wikipedia}}:
+Triada de Virchow.
+\url{https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -49,6 +83,38 @@
 \BMCxmlcomment{
 
 <refgrp>
+
+<bibl id="B1">
+  <title><p>Trombosis Arterial</p></title>
+  <aug>
+    <au><snm>AG</snm><fnm>B</fnm></au>
+  </aug>
+  <url>https://www.thrombosisadviser.com/es/professionals/base-de-conocimientos/fundamentos/trombosis-arterial</url>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Research Progress on the Relationship between Atherosclerosis and
+  Inflammation</p></title>
+  <aug>
+    <au><snm>Zhu</snm><fnm>Y</fnm></au>
+    <au><snm>Xian</snm><fnm>X</fnm></au>
+    <au><snm>Wang</snm><fnm>Z</fnm></au>
+    <au><snm>Bi</snm><fnm>Y</fnm></au>
+    <au><snm>Chen</snm><fnm>Q</fnm></au>
+    <au><snm>Han</snm><fnm>X</fnm></au>
+    <au><snm>Tang</snm><fnm>D</fnm></au>
+    <au><snm>Chen</snm><fnm>R</fnm></au>
+  </aug>
+  <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163673/</url>
+</bibl>
+
+<bibl id="B3">
+  <title><p>Triada de Virchow</p></title>
+  <aug>
+    <au><cnm>Wikipedia</cnm></au>
+  </aug>
+  <url>https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow</url>
+</bibl>
 
 </refgrp>
 } % end of \BMCxmlcomment

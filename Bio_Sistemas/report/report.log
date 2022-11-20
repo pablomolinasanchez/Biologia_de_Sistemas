@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.16)  18 NOV 2022 09:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.16)  20 NOV 2022 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -275,52 +275,150 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
 
 \address@aff1=\toks34
 (tex_files/introduction.tex
-<figures/aterosclerosis.png, id=1, 162.6075pt x 112.92188pt>
-File: figures/aterosclerosis.png Graphic file (type png)
-<use figures/aterosclerosis.png>
-Package pdftex.def Info: figures/aterosclerosis.png  used on input line 6.
-(pdftex.def)             Requested size: 252.6989pt x 175.49919pt.
+
+LaTeX Warning: Reference `fig:example1' on page 1 undefined on input line 2.
 
 
-LaTeX Warning: Citation `HPO_gen' on page 1 undefined on input line 7.
+LaTeX Warning: Reference `fig:example1' on page 1 undefined on input line 2.
+
+<figures/aterosclerosis.jpg, id=1, 1264.725pt x 821.0675pt>
+File: figures/aterosclerosis.jpg Graphic file (type jpg)
+<use figures/aterosclerosis.jpg>
+Package pdftex.def Info: figures/aterosclerosis.jpg  used on input line 6.
+(pdftex.def)             Requested size: 252.6989pt x 164.04771pt.
+
+LaTeX Warning: Citation `imagen_trombo' on page 1 undefined on input line 7.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+
+ []
 
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 13.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 14.
 [1{C:/Users/Pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./figures/aterosclerosis.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 13--15
-
- []
-
-<figures/genes_asociados.png, id=12, 672.26157pt x 481.04718pt>
+ <./figures/aterosclerosis.jpg>]
+<figures/genes_asociados.png, id=13, 672.26157pt x 481.04718pt>
 File: figures/genes_asociados.png Graphic file (type png)
 <use figures/genes_asociados.png>
-Package pdftex.def Info: figures/genes_asociados.png  used on input line 23.
+Package pdftex.def Info: figures/genes_asociados.png  used on input line 22.
 (pdftex.def)             Requested size: 252.6989pt x 180.81798pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+LaTeX Warning: Citation `grafo' on page 2 undefined on input line 23.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+LaTeX Warning: Citation `JAK2' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `JAK2' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `JAK2' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `JAK2' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `STAT4' on page 2 undefined on input line 30.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 [2 <./figures/genes_asociados.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+LaTeX Warning: Citation `IL10' on page 3 undefined on input line 32.
+
+
+LaTeX Warning: Citation `STAT4' on page 3 undefined on input line 32.
+
+
+LaTeX Warning: Citation `STAT4' on page 3 undefined on input line 32.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
+
+LaTeX Warning: Citation `Trombocitosis_Familiar' on page 3 undefined on input l
+ine 38.
+
+
+LaTeX Warning: Citation `Trombocitema_Esencial' on page 3 undefined on input li
+ne 39.
+
+
+LaTeX Warning: Citation `Policitema_Vera' on page 3 undefined on input line 40.
+
+
 ) (tex_files/material_methods.tex) (tex_files/resultados.tex)
-(tex_files/discusion.tex) (tex_files/conclusiones.tex) (report.bbl [3]
+(tex_files/discusion.tex) (tex_files/conclusiones.tex) [3] (report.bbl
+Runaway argument?
+{https://es.wikipedia.org/wiki/Tr\end {botherref} \endbibitem 
+! Paragraph ended before \url was complete.
+<to be read again> 
+                   \par 
+l.78 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 45.
 
-) 
+! LaTeX Error: \begin{botherref} on input line 72 ended by \end{thebibliography
+}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \end{thebibliography}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+
+! LaTeX Error: \begin{thebibliography} on input line 3 ended by \end{backmatter
+}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.140 	\end{backmatter}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 AED: lastpage setting LastPage
-[4] (report.aux)
+[4]
+
+! LaTeX Error: \begin{backmatter} on input line 118 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -328,24 +426,28 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 118 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 3931 strings out of 475306
- 62984 string characters out of 2776249
- 415691 words of memory out of 3000000
- 25330 multiletter control sequences out of 15000+600000
+ 3937 strings out of 475306
+ 63075 string characters out of 2776249
+ 415700 words of memory out of 3000000
+ 25335 multiletter control sequences out of 15000+600000
  476486 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,67p,977b,413s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmbx8.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmss10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmss17.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on report.pdf (4 pages, 352336 bytes).
+ 60i,9n,67p,1078b,361s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx8.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Pc/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Pc/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on report.pdf (4 pages, 368604 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

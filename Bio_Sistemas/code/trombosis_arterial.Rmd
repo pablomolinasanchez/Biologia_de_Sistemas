@@ -27,7 +27,7 @@ library(igraph)
 ```
 ##Path
 ```{r}
-path<-"/home/pamosa/Documentos/" #select your path
+path<-"~/Biologia_de_Sistemas/Bio_Sistemas/code/" #select your path
 setwd(path)
 ```
 # Creación del grafo{.tabset}
