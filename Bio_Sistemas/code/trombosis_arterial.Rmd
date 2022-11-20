@@ -24,6 +24,8 @@ library(org.Hs.eg.db)
 library(devtools)
 library(dplyr)
 library(igraph)
+library(ggplot2)
+library(zoo)
 ```
 ##Path
 ```{r}
@@ -153,3 +155,184 @@ community_3_id<-list(811,3717, 4352,10019,54790,7066)
 go_3<-overrep_enrichment_GO(community_3_id,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
 head(go_3)
 ```
+
+# Estudio de la robustez
+```{r message=FALSE, warning=FALSE, include=FALSE}
+# definimos las funciones:
+
+# ataque dirigido:
+sequential.attacks.targeted <- function(grafo, measure=degree){
+  
+  q = seq(from=0,to=1,by=0.01)
+  g = grafo
+  S = max(components(grafo)$csize)/vcount(grafo)
+  contador = S
+  removalset = NULL
+  v = vcount(grafo)
+  s = max(components(grafo)$csize)
+  for(i in q){
+    if(max(components(g)$csize)/vcount(grafo) >0.05){
+      removalset <- names(sort(degree(g),decreasing = T)[1:(i*vcount(g))])
+      g <- delete.vertices(graph = g, v = removalset)
+      S = c(S, max(components(g)$csize)/vcount(grafo))
+      v <- c(v, vcount(g))
+      s = c(s, max(components(g)$csize))
+      contador = max(components(g)$csize)/vcount(grafo)
+    }
+    
+  }
+  S.vs.q <- tbl_df(data.frame(cbind(q[1:length(S)],S,s,v)))
+  names(S.vs.q) <- c("q", "S", "s", "v")
+  return(S.vs.q)
+}
+
+# ataque aleatorio
+sequential.attacks.random <- function(grafo, measure=degree){
+  
+  q = seq(from=0,to=1,by=0.01)
+  g = grafo
+  S = max(components(grafo)$csize)/vcount(grafo)
+  contador = S
+  removalset = NULL
+  v = vcount(grafo)
+  s = max(components(grafo)$csize)
+  for(i in q){
+    if(contador > 0.05 & length(removalset) < vcount(g)/2){
+      removalset <- sample(x = V(g)$name, size = 10, replace = F)
+      g <- delete.vertices(graph = g, v = removalset)
+      S = c(S, max(components(g)$csize)/vcount(grafo))
+      v <- c(v, vcount(g))
+      s = c(s, max(components(g)$csize))
+      contador = max(components(g)$csize)/vcount(grafo)
+    }
+    
+  }
+  S.vs.q <- tbl_df(data.frame(cbind(q[1:length(S)],S,s,v)))
+  names(S.vs.q) <- c("q", "S", "s", "v")
+  return(S.vs.q)
+}
+
+#puntuacion robustez dirigido
+robustness.targeted2 <- function(grafo, measure=degree){
+  
+  
+  
+  q = seq(from=0.01,to=1,by=0.01)
+  g = grafo
+  S = max(components(grafo)$csize)/vcount(grafo)
+  contador = S
+  removalset = NULL
+  for(i in q){
+    if(max(components(g)$csize)/vcount(grafo) >0.05){
+      removalset <- names(sort(degree(g),decreasing = T)[1:(i*vcount(g))])
+      g <- delete.vertices(graph = g, v = removalset)
+      S = c(S, max(components(g)$csize)/vcount(grafo))
+      contador = max(components(g)$csize)/vcount(grafo)
+    }
+  }
+  x <- as.numeric(q[1:length(S)])
+  y <- as.numeric(S)
+  id <- order(x)
+  return(sum(diff(x[id])*rollmean(y[id],2)))
+} 
+#puntuacionrobustez aleatorio
+
+robustness.random2 <- function(grafo, measure=degree){
+ 
+  q = seq(from=0.01,to=1,by=0.01)
+  g = grafo
+  S = max(components(grafo)$csize)/vcount(grafo)
+  contador = S
+  removalset = NULL
+  for(i in q){
+    if(contador > 0.05 & length(removalset) < vcount(g)/2){
+      removalset <- sample(x = V(g)$name, size = 10, replace = F)
+      g <- delete.vertices(graph = g, v = removalset)
+      S = c(S, max(components(g)$csize)/vcount(grafo))
+      
+      contador = max(components(g)$csize)/vcount(grafo)
+    }
+  }
+  x <- as.numeric(q[1:length(S)])
+  x <- x[!is.na(x)]
+  y <- as.numeric(S)
+  id <- order(x)
+  return(sum(diff(x[id])*rollmean(y[id],2)))
+} 
+
+# plot the graph
+plot_graph <- function(graph){
+  V(graph)$label <- NA
+  V(graph)$name <- NA
+  V(graph)$size <- degree(graph)/5
+  E(graph)$edge.color <- "gray80"
+  V(graph)$color <- "tomato"
+  # graph_attr(graph, "layout") <- layout_with_lgl
+  graph_attr(graph, "layout") <- layout.kamada.kawai
+  plot(graph)
+  
+}
+# plot
+plot_graph <- function(graph){
+  V(graph)$label <- NA
+  V(graph)$name <- NA
+  V(graph)$size <- degree(graph)/5
+  E(graph)$edge.color <- "gray80"
+  V(graph)$color <- "tomato"
+  # graph_attr(graph, "layout") <- layout_with_lgl
+  graph_attr(graph, "layout") <- layout.kamada.kawai
+  plot(graph)
+  
+}
+```
+
+## Ataque dirigido
+
+```{r echo=FALSE, warning=FALSE}
+targeted <- sequential.attacks.targeted(net, measure = degree)
+targeted$attack <- rep("targeted")
+```
+
+```{r echo=FALSE, warning=FALSE}
+ggplot(targeted, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
+  theme_bw() +
+  theme(plot.background = element_blank(),  panel.grid.minor = element_blank(),plot.title=element_text(size=15)) +
+  geom_line() +
+  ggtitle("Ataque secuencial dirigido") +
+  ylab("S(q)") +
+  xlab("q")
+```
+
+```{r}
+targeted_score <- robustness.targeted2(net, measure = degree)
+targeted_score
+```
+
+
+## Ataque aleatorio
+
+```{r warning=FALSE}
+random <- sequential.attacks.random(net, measure = degree)
+random$attack <- rep("random")
+```
+
+
+```{r warning=FALSE}
+ggplot(random, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
+  theme_bw() +
+  theme(plot.background = element_blank(),  panel.grid.minor = element_blank(),plot.title=element_text(size=15)) +
+  geom_line() +
+  ggtitle("Ataque secuencial aleatorio") +
+  ylab("S(q)") +
+  xlab("q")
+```
+
+```{r}
+random_score <- robustness.random2(net, measure = degree)
+random_score
+```
+
+
+
+
+
