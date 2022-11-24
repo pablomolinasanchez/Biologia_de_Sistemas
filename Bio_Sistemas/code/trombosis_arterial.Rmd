@@ -29,7 +29,7 @@ library(zoo)
 ```
 ##Path
 ```{r}
-path<-"~/Biologia_de_Sistemas/Bio_Sistemas/code/" #select your path
+path<-"~Biologia_de_Sistemas/Bio_Sistemas/code/" #select your path
 setwd(path)
 ```
 # Creación del grafo{.tabset}
@@ -79,7 +79,7 @@ Vemos que el IL10 es el gen con más grado y por tanto más importante
 ## ¿Con qué gen guarda mayor relación IL10?
 ```{r}
 news.path <- shortest_paths(net, from = V(net), to  = 'IL10',output = "both")
-ecol <- rep("gray80", ecount(net))
+ecol <- rep("gray0", ecount(net))
 ecol[unlist(news.path$epath)] <- "orange"
 ew <- rep(2, ecount(net))
 ew[unlist(news.path$epath)] <- 4
@@ -103,18 +103,56 @@ scale_freeness<-function(net){
 }
 scale_freeness(net)
 ```
-El grafo no es libre de escala, ya que, como hemos podido observar anteriormente, está altamente conectado entre sus nodos.
 
-## ¿Qué comunidades presenta nuestro conjunto de genes?
-Acontinuación, observamos las comunidades funcionales de genes que intervienen en la trombosis arterial.
+
+# Network Propagation
+
+Creamos un txt solo con el nombre de los genes a partir del .tsv con informacion de los nodos.
+
 ```{r}
-community <- cluster_edge_betweenness(net)
-dendPlot(community, mode="hclust")
-plot(community, net,layout=layout_nicely ,edge.arrow.size=0.2, edge.curved=0.1, vertex.frame.color="black",vertex.label=V(net)$id, vertex.label.color="black", vertex.label.cex=0.7)
-length(community)
-membership(community)
+head(nodes)
 ```
-Como podemos ver, hay dos comunidades principales que engloban a gran mayoría de genes, una tercera que involucra a tres genes y oco comunidades restantes ocupadas por un gen cada una.
+
+```{r}
+genIDs <- nodes$X.node
+genIDs
+```
+```{r warning=FALSE}
+genes <- bitr(genIDs, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+write.table(genes$ENTREZID, file = "genesIDs.txt", quote = FALSE, row.names = FALSE )
+```
+Ahora con el siguiente comando ejecuamos DIAMOnD:
+
+python3 DIAMOnD.py network_diamond.txt genesIDs.txt 50 1 outputDiamond.txt
+
+Leemos el archivo y creamos un nuevo dataset con la propagación:
+```{r}
+genesProp<-read.csv("outputDiamond.txt",sep="\t")
+genesProp<-genesProp$DIAMOnD_node
+```
+```{r}
+genesProp_Name<-genes <- bitr(genesProp, fromType = "ENTREZID", toType = "SYMBOL", OrgDb = org.Hs.eg.db)
+genesName<-c(genesProp_Name$SYMBOL,genIDs)
+genesIds_prop<-c(genesProp_Name$ENTREZID,genes$ENTREZID)
+genesName
+```
+
+Con esto obtenemos el listado de genes propagados junto a los pertenecientes a la trombosis arterial. Creamos un nuevo gráfico tras descargar nuesvos archivos de STRINGDB.
+```{r}
+nodes_prop<-read.csv("string_node_degrees_prop.tsv",sep ="")
+links_prop<-read.csv("string_interactions_prop.tsv",sep="")
+net_prop <- graph_from_data_frame(d=links_prop,vertices=nodes_prop, directed=T)
+
+```
+```{r}
+community <- cluster_edge_betweenness(net_prop)
+dendPlot(community, mode="hclust")
+plot(community, net_prop,layout=layout_nicely ,edge.arrow.size=0.2, edge.curved=0.1, vertex.frame.color="black",vertex.label=V(net_prop)$id, vertex.label.color="black", vertex.label.cex=0.7)
+length(community)
+hist(membership(community))
+```
+
+
 
 # Enriquecimientos de las comunidades{.tabset}
 ## Función para el enriquecimiento de los procesos biológicos con GO
@@ -129,37 +167,96 @@ overrep_enrichment_GO <- function(gene,universe,Db, ont, pAdjustMethod, p,q) {
                   pvalueCutoff  = p,
                   qvalueCutoff  = q,
                   readable      = TRUE)
-
   return (ego)
 }
+
 ```
-
-## Comunidad IL10, AKT1, IFNGR1, IL23R, PTEN,  PTPN22, STAT4, TP53  
+## Comunidad 1 
 ```{r}
-community_1<-community[1]
 
-# introducimos sus ids
-community_1_id<-list(3586,207,3459,149233,5728,26191,6775,7157)
-
-go_1<-overrep_enrichment_GO(community_1_id,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+community_1<-as.data.frame(community[1])
+community[1]
+community_1<-bitr(community[1]$`1`, fromType ="SYMBOL", toType ="ENTREZID",OrgDb=org.Hs.eg.db)
+go_1<-overrep_enrichment_GO(community_1$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
 head(go_1)
 ```
-
-## Comunidad CALR, JAK2, MPL, SH2B3, TET2, THPO
+## Comunidad 2 
 ```{r}
-community_3<-community[3]
-
-# introducimos sus ids
-community_3_id<-list(811,3717, 4352,10019,54790,7066)
-
-go_3<-overrep_enrichment_GO(community_3_id,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+community_2<-as.data.frame(community[2])
+community[2]
+community_2<-bitr(community_2$X2, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_2<-overrep_enrichment_GO(community_2$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_2)
+```
+## Comunidad 3 
+```{r}
+community_3<-as.data.frame(community[3])
+community_3
+community_3<-bitr(community[3]$`3`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_3<-overrep_enrichment_GO(community_3$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
 head(go_3)
 ```
+## Comunidad 4 (un gen)
+```{r}
+community_4<-as.data.frame(community[4])
+community_4
+community_4<-bitr(community[4]$`4`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_4<-overrep_enrichment_GO(community_4$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_4)
+```
+## Comunidad 5 (un gen)
+```{r}
+community_5<-as.data.frame(community[5])
+community_5
+community_5<-bitr(community[5]$`5`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_5<-overrep_enrichment_GO(community_5$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_5)
+```
+## Comunidad 6 (un gen) 
+```{r}
+community_6<-as.data.frame(community[6])
+community_6
+community_6<-bitr(community[6]$`6`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_6<-overrep_enrichment_GO(community_6$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_6)
+```
+## Comunidad 7 
+```{r}
+community_7<-as.data.frame(community[7])
+community_7
+community_7<-bitr(community[7]$`7`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_7<-overrep_enrichment_GO(community_7$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_7)
+```
+## Comunidad 8 (un gen)
+```{r}
+community_8<-as.data.frame(community[8])
+community_8
+community_8<-bitr(community[8]$`8`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_8<-overrep_enrichment_GO(community_8$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_8)
+```
+## Comunidad 9 (un gen) 
+```{r}
+community_9<-as.data.frame(community[9])
+community_9
+community_9<-bitr(community[9]$`9`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_9<-overrep_enrichment_GO(community_9$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_9)
+```
+## Comunidad 10 
+```{r}
+community_10<-as.data.frame(community[10])
+community_10
+community_10<-bitr(community[10]$`10`, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+go_10<-overrep_enrichment_GO(community_10$ENTREZID,geneList,org.Hs.eg.db,"BP","BH", 0.05,0.05)
+head(go_10)
+```
 
-# Estudio de la robustez
+# Estudio de la robustez {.tabset}
+## Función
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 # definimos las funciones:
-
 # ataque dirigido:
 sequential.attacks.targeted <- function(grafo, measure=degree){
   
@@ -185,7 +282,6 @@ sequential.attacks.targeted <- function(grafo, measure=degree){
   names(S.vs.q) <- c("q", "S", "s", "v")
   return(S.vs.q)
 }
-
 # ataque aleatorio
 sequential.attacks.random <- function(grafo, measure=degree){
   
@@ -198,7 +294,7 @@ sequential.attacks.random <- function(grafo, measure=degree){
   s = max(components(grafo)$csize)
   for(i in q){
     if(contador > 0.05 & length(removalset) < vcount(g)/2){
-      removalset <- sample(x = V(g)$name, size = 10, replace = F)
+      removalset <- sample(x = V(g)$name, size = 1, replace = F)
       g <- delete.vertices(graph = g, v = removalset)
       S = c(S, max(components(g)$csize)/vcount(grafo))
       v <- c(v, vcount(g))
@@ -211,7 +307,6 @@ sequential.attacks.random <- function(grafo, measure=degree){
   names(S.vs.q) <- c("q", "S", "s", "v")
   return(S.vs.q)
 }
-
 #puntuacion robustez dirigido
 robustness.targeted2 <- function(grafo, measure=degree){
   
@@ -236,7 +331,6 @@ robustness.targeted2 <- function(grafo, measure=degree){
   return(sum(diff(x[id])*rollmean(y[id],2)))
 } 
 #puntuacionrobustez aleatorio
-
 robustness.random2 <- function(grafo, measure=degree){
  
   q = seq(from=0.01,to=1,by=0.01)
@@ -259,7 +353,6 @@ robustness.random2 <- function(grafo, measure=degree){
   id <- order(x)
   return(sum(diff(x[id])*rollmean(y[id],2)))
 } 
-
 # plot the graph
 plot_graph <- function(graph){
   V(graph)$label <- NA
@@ -289,7 +382,7 @@ plot_graph <- function(graph){
 ## Ataque dirigido
 
 ```{r echo=FALSE, warning=FALSE}
-targeted <- sequential.attacks.targeted(net, measure = degree)
+targeted <- sequential.attacks.targeted(net_prop, measure = degree)
 targeted$attack <- rep("targeted")
 ```
 
@@ -304,7 +397,7 @@ ggplot(targeted, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
 ```
 
 ```{r}
-targeted_score <- robustness.targeted2(net, measure = degree)
+targeted_score <- robustness.targeted2(net_prop, measure = degree)
 targeted_score
 ```
 
@@ -312,7 +405,7 @@ targeted_score
 ## Ataque aleatorio
 
 ```{r warning=FALSE}
-random <- sequential.attacks.random(net, measure = degree)
+random <- sequential.attacks.random(net_prop, measure = degree)
 random$attack <- rep("random")
 ```
 
@@ -328,28 +421,6 @@ ggplot(random, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
 ```
 
 ```{r}
-random_score <- robustness.random2(net, measure = degree)
+random_score <- robustness.random2(net_prop, measure = degree)
 random_score
 ```
-
-# Network Propagation
-
-Creamos un txt solo con el nombre de los genes a partir del .tsv con informacion de los nodos.
-
-```{r}
-head(nodes)
-```
-
-```{r}
-genIDs <- nodes$X.node
-genIDs
-```
-```{r warning=FALSE}
-genes <- bitr(genIDs, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
-write.table(genes$ENTREZID, file = "genesIDs.txt", quote = FALSE, row.names = FALSE )
-```
-Ahora con el siguiente comando ejecuamos DIAMOnD:
-
-python3 DIAMOnD.py network_diamond.txt genesIDs.txt 100 1 outputDiamond.txt
-
-# 
