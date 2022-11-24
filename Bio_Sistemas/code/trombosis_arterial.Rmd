@@ -332,7 +332,24 @@ random_score <- robustness.random2(net, measure = degree)
 random_score
 ```
 
+# Network Propagation
 
+Creamos un txt solo con el nombre de los genes a partir del .tsv con informacion de los nodos.
 
+```{r}
+head(nodes)
+```
 
+```{r}
+genIDs <- nodes$X.node
+genIDs
+```
+```{r warning=FALSE}
+genes <- bitr(genIDs, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
+write.table(genes$ENTREZID, file = "genesIDs.txt", quote = FALSE, row.names = FALSE )
+```
+Ahora con el siguiente comando ejecuamos DIAMOnD:
 
+python3 DIAMOnD.py network_diamond.txt genesIDs.txt 100 1 outputDiamond.txt
+
+# 
