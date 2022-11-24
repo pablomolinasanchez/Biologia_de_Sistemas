@@ -400,6 +400,10 @@ ggplot(targeted, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
 targeted_score <- robustness.targeted2(net_prop, measure = degree)
 targeted_score
 ```
+```{r}
+targeted
+targeted[targeted$q == '0.1', ]
+```
 
 
 ## Ataque aleatorio
@@ -424,3 +428,62 @@ ggplot(random, aes(x=q, y=S, color=S)) + geom_point(alpha=.4, size=2) +
 random_score <- robustness.random2(net_prop, measure = degree)
 random_score
 ```
+
+## Nodos importantes
+```{r}
+#calculamos el numero de enlaces que salen de cada vertice
+net_degree <- degree(net_prop, mode = c("out"))
+(net_degree)
+```
+```{r}
+hist(net_degree, breaks = 20)
+```
+```{r}
+#el nodo con mas enlaces
+net_degree[which.max(net_degree)]
+```
+
+```{r}
+net_betweenness <- betweenness(net_prop, directed = TRUE)
+```
+
+```{r}
+#plot en el que el tamaño del nodo lo determina el numero de conexiones
+plot(net_prop, 
+     vertex.label = NA,
+     edge.color = 'black',
+     vertex.size = sqrt(net_betweenness),
+     edge.arrow.size = 0.05,
+     layout = layout_nicely(net_prop))
+```
+```{r}
+#calculamos la densidad del grafo; que tan interconectada esta la red
+gd <- edge_density(net_prop)
+gd
+```
+
+```{r}
+# promedio de las longitudes de los caminos más cortos entre todos los pares de nodos de la red. entre más pequeño el valor más interconectada la red
+g.apl <- mean_distance(net_prop, directed = FALSE)
+g.apl
+```
+```{r}
+#plot interactivo por si luego queremos implemetnarlo
+
+library(threejs)
+g <- set_vertex_attr(net_prop, "color", value = "dodgerblue")
+graphjs(g, vertex.size = 1)
+```
+
+
+```{r}
+library(brainGraph)
+#ataque dirigido con otra funcion
+robustness(net_prop, type = "vertex", measure = 'degree' , N = 1000)
+```
+```{r}
+m1 <- layout_nicely(net_prop)
+plot(net_prop, vertex.label.color = "black", layout = m1 )
+
+```
+
