@@ -47,51 +47,56 @@ Warning--entry type for "HPO" isn't style-file defined
 --line 57 of file bibliography.bib
 Warning--entry type for "STRING" isn't style-file defined
 --line 62 of file bibliography.bib
-Warning--I didn't find a database entry for "Trombocitema_Familiar"
+Warning--entry type for "igraph" isn't style-file defined
+--line 67 of file bibliography.bib
+Warning--entry type for "linkcomm" isn't style-file defined
+--line 94 of file bibliography.bib
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--to sort, need author or key in igraph
+Warning--to sort, need author or key in linkcomm
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 13 entries,
+You've used 16 entries,
             7128 wiz_defined-function locations,
-            1179 strings with 11084 characters,
-and the built_in function-call counts, 393278 in all, are:
-= -- 76092
-> -- 206
-< -- 67
-+ -- 49373
-- -- 129
-* -- 7701
-:= -- 66619
-add.period$ -- 13
-call.type$ -- 13
-change.case$ -- 176
-chr.to.int$ -- 11
-cite$ -- 13
-duplicate$ -- 867
-empty$ -- 2937
-format.name$ -- 327
-if$ -- 102162
+            1189 strings with 11490 characters,
+and the built_in function-call counts, 449668 in all, are:
+= -- 86494
+> -- 269
+< -- 84
++ -- 55730
+- -- 166
+* -- 9294
+:= -- 76479
+add.period$ -- 15
+call.type$ -- 16
+change.case$ -- 212
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 1133
+empty$ -- 3732
+format.name$ -- 456
+if$ -- 116443
 int.to.chr$ -- 3
-int.to.str$ -- 27
-missing$ -- 428
-newline$ -- 314
-num.names$ -- 65
-pop$ -- 577
+int.to.str$ -- 33
+missing$ -- 548
+newline$ -- 386
+num.names$ -- 70
+pop$ -- 737
 preamble$ -- 1
-purify$ -- 52
-quote$ -- 26
-skip$ -- 46270
+purify$ -- 62
+quote$ -- 32
+skip$ -- 52514
 stack$ -- 0
-substring$ -- 37359
-swap$ -- 84
-text.length$ -- 186
+substring$ -- 42909
+swap$ -- 123
+text.length$ -- 222
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 403
-warning$ -- 0
-while$ -- 360
+type$ -- 489
+warning$ -- 2
+while$ -- 443
 width$ -- 0
-write$ -- 417
-(There were 14 warnings)
+write$ -- 534
+(There were 17 warnings)
