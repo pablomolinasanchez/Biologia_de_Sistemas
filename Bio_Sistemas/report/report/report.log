@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.16)  24 NOV 2022 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.28)  28 NOV 2022 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -281,11 +281,36 @@ LaTeX Warning: Reference `fig:example1' on page 1 undefined on input line 2.
 
 LaTeX Warning: Reference `fig:example1' on page 1 undefined on input line 2.
 
-<figures/aterosclerosis.jpg, id=1, 1264.725pt x 821.0675pt>
-File: figures/aterosclerosis.jpg Graphic file (type jpg)
-<use figures/aterosclerosis.jpg>
-Package pdftex.def Info: figures/aterosclerosis.jpg  used on input line 6.
-(pdftex.def)             Requested size: 252.6989pt x 164.04771pt.
+! Undefined control sequence.
+l.6 	\includegraphicswidth
+                          =0.70\textwidth{figures/aterosclerosis.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.6 	\includegraphicswidth=0.70\textwidth{
+                                          figures/aterosclerosis.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.6 	\includegraphicswidth=0.70\textwidth{
+                                          figures/aterosclerosis.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 
 LaTeX Warning: Citation `imagen_trombo' on page 1 undefined on input line 7.
 
@@ -294,25 +319,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 
  []
 
-LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 14.
-[1{C:/Users/Pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+! Undefined control sequence.
+l.22     	\includegraphicswidth
+                               =0.70\textwidth{figures/genes_asociados.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- <./figures/aterosclerosis.jpg>]
-<figures/genes_asociados.png, id=13, 672.26157pt x 481.04718pt>
-File: figures/genes_asociados.png Graphic file (type png)
-<use figures/genes_asociados.png>
-Package pdftex.def Info: figures/genes_asociados.png  used on input line 22.
-(pdftex.def)             Requested size: 252.6989pt x 180.81798pt.
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.22     	\includegraphicswidth=0.70\textwidth{
+                                               figures/genes_asociados.png}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.22     	\includegraphicswidth=0.70\textwidth{
+                                               figures/genes_asociados.png}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.22 ...raphicswidth=0.70\textwidth{figures/genes_
+                                                  asociados.png}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.22 ....70\textwidth{figures/genes_asociados.png}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.23 ...de colores (tomada de STRING\cite{grafo}.}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Citation `grafo' on page 2 undefined on input line 23.
+LaTeX Warning: Citation `grafo' on page 1 undefined on input line 23.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25       \end{figure}
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.25       \end{figure}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.25       \end{figure}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.25       \end{figure}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Reference `fig: Figura 2' on page 1 undefined on input line 28.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 29.
+[1{C:/Users/Pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+]
 
 LaTeX Warning: Citation `JAK2' on page 2 undefined on input line 30.
 
@@ -333,60 +453,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[2 <./figures/genes_asociados.png>]
 
-LaTeX Warning: Citation `IL10' on page 3 undefined on input line 32.
-
-
-LaTeX Warning: Citation `STAT4' on page 3 undefined on input line 32.
+LaTeX Warning: Citation `IL10' on page 2 undefined on input line 32.
 
 
-LaTeX Warning: Citation `STAT4' on page 3 undefined on input line 32.
+LaTeX Warning: Citation `STAT4' on page 2 undefined on input line 32.
+
+
+LaTeX Warning: Citation `STAT4' on page 2 undefined on input line 32.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
+)
+Runaway argument?
+{{Enfermedades Asociadas} La trombosis arterial en ocasiones provoca \ETC.
+! File ended while scanning use of \@xdblarg.
+<inserted text> 
+                \par 
+l.98 	\input{tex_files/introduction.tex}
+                                        
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-LaTeX Warning: Citation `Trombocitosis_Familiar' on page 3 undefined on input l
-ine 38.
+(tex_files/material_methods.tex
 
-
-LaTeX Warning: Citation `Trombocitema_Esencial' on page 3 undefined on input li
-ne 39.
-
-
-LaTeX Warning: Citation `Policitema_Vera' on page 3 undefined on input line 40.
-
-
-) (tex_files/material_methods.tex
-
-LaTeX Warning: Citation `HPO' on page 3 undefined on input line 8.
-
-
-LaTeX Warning: Citation `STRING' on page 3 undefined on input line 8.
+LaTeX Warning: Citation `HPO' on page 2 undefined on input line 7.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+LaTeX Warning: Citation `STRING' on page 2 undefined on input line 7.
+
+
+LaTeX Warning: Reference `fig: Figura 2' on page 2 undefined on input line 7.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[3]
+[2]
 
-LaTeX Warning: Citation `HPO' on page 4 undefined on input line 12.
-
-
-LaTeX Warning: Citation `Policitema_Vera' on page 4 undefined on input line 12.
+LaTeX Warning: Citation `igraph' on page 3 undefined on input line 12.
 
 
-
-LaTeX Warning: Citation `Trombocitema_Esencial' on page 4 undefined on input li
-ne 12.
+LaTeX Warning: Citation `STRING' on page 3 undefined on input line 14.
 
 
-LaTeX Warning: Citation `Trombocitema_Familiar' on page 4 undefined on input li
-ne 12.
+LaTeX Warning: Citation `linkcomm' on page 3 undefined on input line 16.
+
+
+LaTeX Warning: Citation `clusterProfiler' on page 3 undefined on input line 18.
+
 
 ) (tex_files/resultados.tex) (tex_files/discusion.tex)
 (tex_files/conclusiones.tex) (report.bbl
@@ -432,7 +553,7 @@ or  <return>  to continue without it.
 
 
 AED: lastpage setting LastPage
-[4]
+[3]
 
 ! LaTeX Error: \begin{backmatter} on input line 118 ended by \end{document}.
 
@@ -455,19 +576,18 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
  )
-(\end occurred inside a group at level 2)
+(\end occurred inside a group at level 1)
 
-### semi simple group (level 2) entered at line 118 (\begingroup)
-### simple group (level 1) entered at line 8 ({)
+### semi simple group (level 1) entered at line 118 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3939 strings out of 475306
- 63252 string characters out of 2776249
- 415700 words of memory out of 3000000
- 25336 multiletter control sequences out of 15000+600000
+ 3922 strings out of 475284
+ 63051 string characters out of 2775520
+ 416954 words of memory out of 3000000
+ 25346 multiletter control sequences out of 15000+600000
  476832 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,67p,1078b,436s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,9n,67p,1045b,357s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmbx8.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/typ
@@ -477,9 +597,9 @@ X/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Pc/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Pc/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Pc/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (4 pages, 387829 bytes).
+Output written on report.pdf (3 pages, 129048 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

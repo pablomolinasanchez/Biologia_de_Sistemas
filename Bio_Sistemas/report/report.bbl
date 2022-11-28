@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{3}
+\begin{thebibliography}{13}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -68,6 +68,15 @@ Research Progress on the Relationship Between Atherosclerosis and Inflammation.
 \endbibitem
 
 %%% 3
+\bibitem{imagen_trombo}
+\begin{botherref}
+\oauthor{\bsnm{Dallas!}, \binits{H.}}:
+La Aterosclerosis Es Lo Que Impulsa a Los Problemas Cardíacos.
+\url{https://www.hoydallas.com/index.php/vida-y-salud/nutricion/1833-la-aterosclerosis-es-lo-que-impulsa-a-los-problemas-cardiacos}
+\end{botherref}
+\endbibitem
+
+%%% 4
 \bibitem{Triada_Virchow}
 \begin{botherref}
 \oauthor{\bsnm{Wikipedia}}:
@@ -75,6 +84,102 @@ Triada de Virchow.
 \url{https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow}
 \end{botherref}
 \endbibitem
+
+%%% 5
+\bibitem{grafo}
+\begin{botherref}
+\oauthor{\bsnm{String}}:
+25 Human Gene.
+\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem{JAK2}
+\begin{botherref}
+\oauthor{\bsnm{Perner}, \binits{F.}},
+\oauthor{\bsnm{Perner}, \binits{C.}},
+\oauthor{\bsnm{Ernst}, \binits{T.}},
+\oauthor{\bsnm{Heidel}, \binits{F.H.}}:
+Roles of JAK2 in Aging, Inflammation, Hematopoiesis and Malignant
+  Transformation.
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6721738/}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem{STAT4}
+\begin{botherref}
+\oauthor{\bsnm{Yang}, \binits{C.}},
+\oauthor{\bsnm{Mai}, \binits{H.}},
+\oauthor{\bsnm{Peng}, \binits{J.}},
+\oauthor{\bsnm{Zhou}, \binits{B.}},
+\oauthor{\bsnm{Hou}, \binits{J.}},
+\oauthor{\bsnm{Jiang}, \binits{D.}}:
+STAT4.
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7097918/}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem{IL10}
+\begin{botherref}
+\oauthor{\bsnm{Ouyang}, \binits{W.}},
+\oauthor{\bsnm{Rutz}, \binits{S.}},
+\oauthor{\bsnm{Crellin}, \binits{N.K.}},
+\oauthor{\bsnm{Valdez}, \binits{P.A.}},
+\oauthor{\bsnm{Hymowitz}, \binits{S.G.}}:
+Regulation and Functions of the IL-10 Family of Cytokines in Inflammation and
+  Disease.
+\url{https://www.annualreviews.org/doi/10.1146/annurev-immunol-031210-101312}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem{Trombocitosis_Familiar}
+\begin{botherref}
+\oauthor{\bsnm{ORPHA}}:
+Trombocitosis Familiar.
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem{Trombocitema_Esencial}
+\begin{botherref}
+\oauthor{\bsnm{ORPHA}}:
+Trombocitemia Esencial.
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{Policitema_Vera}
+\begin{botherref}
+\oauthor{\bsnm{ORPHA}}:
+Policitemia Vera.
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem{HPO}
+\begin{botherref}
+\oauthor{\bsnm{HPO}}:
+The Formation of a Blood Clot Inside an Artery.
+\url{https://hpo.jax.org/app/browse/term/HP:0004420}
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem{STRING}
+\begin{botherref}
+\oauthor{\bsnm{STRING}}:
+25 Human Gene.
+\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -108,11 +213,107 @@ Triada de Virchow.
 </bibl>
 
 <bibl id="B3">
+  <title><p>La aterosclerosis es lo que impulsa a los problemas
+  cardíacos</p></title>
+  <aug>
+    <au><snm>Dallas!</snm><fnm>HOY</fnm></au>
+  </aug>
+  <pubdate>2015</pubdate>
+  <url>https://www.hoydallas.com/index.php/vida-y-salud/nutricion/1833-la-aterosclerosis-es-lo-que-impulsa-a-los-problemas-cardiacos</url>
+</bibl>
+
+<bibl id="B4">
   <title><p>Triada de Virchow</p></title>
   <aug>
     <au><cnm>Wikipedia</cnm></au>
   </aug>
   <url>https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow</url>
+</bibl>
+
+<bibl id="B5">
+  <title><p>25 human gene</p></title>
+  <aug>
+    <au><cnm>String</cnm></au>
+  </aug>
+  <url>https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki</url>
+</bibl>
+
+<bibl id="B6">
+  <title><p>Roles of JAK2 in Aging, Inflammation, Hematopoiesis and Malignant
+  Transformation</p></title>
+  <aug>
+    <au><snm>Perner</snm><fnm>F</fnm></au>
+    <au><snm>Perner</snm><fnm>C</fnm></au>
+    <au><snm>Ernst</snm><fnm>T</fnm></au>
+    <au><snm>Heidel</snm><fnm>FH</fnm></au>
+  </aug>
+  <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6721738/</url>
+</bibl>
+
+<bibl id="B7">
+  <title><p>STAT4</p></title>
+  <aug>
+    <au><snm>Yang</snm><fnm>C</fnm></au>
+    <au><snm>Mai</snm><fnm>H</fnm></au>
+    <au><snm>Peng</snm><fnm>J</fnm></au>
+    <au><snm>Zhou</snm><fnm>B</fnm></au>
+    <au><snm>Hou</snm><fnm>J</fnm></au>
+    <au><snm>Jiang</snm><fnm>D</fnm></au>
+  </aug>
+  <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7097918/</url>
+</bibl>
+
+<bibl id="B8">
+  <title><p>Regulation and Functions of the IL-10 Family of Cytokines in
+  Inflammation and Disease</p></title>
+  <aug>
+    <au><snm>Ouyang</snm><fnm>W</fnm></au>
+    <au><snm>Rutz</snm><fnm>S</fnm></au>
+    <au><snm>Crellin</snm><fnm>NK</fnm></au>
+    <au><snm>Valdez</snm><fnm>PA</fnm></au>
+    <au><snm>Hymowitz</snm><fnm>SG</fnm></au>
+  </aug>
+  <url>https://www.annualreviews.org/doi/10.1146/annurev-immunol-031210-101312</url>
+</bibl>
+
+<bibl id="B9">
+  <title><p>Trombocitosis Familiar</p></title>
+  <aug>
+    <au><cnm>ORPHA</cnm></au>
+  </aug>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493</url>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Trombocitemia Esencial</p></title>
+  <aug>
+    <au><cnm>ORPHA</cnm></au>
+  </aug>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599</url>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Policitemia Vera</p></title>
+  <aug>
+    <au><cnm>ORPHA</cnm></au>
+  </aug>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729</url>
+</bibl>
+
+<bibl id="B12">
+  <title><p>The formation of a blood clot inside an artery.</p></title>
+  <aug>
+    <au><cnm>HPO</cnm></au>
+  </aug>
+  <url>https://hpo.jax.org/app/browse/term/HP:0004420</url>
+</bibl>
+
+<bibl id="B13">
+  <title><p>25 human gene</p></title>
+  <aug>
+    <au><cnm>STRING</cnm></au>
+  </aug>
+  <url>https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki</url>
 </bibl>
 
 </refgrp>

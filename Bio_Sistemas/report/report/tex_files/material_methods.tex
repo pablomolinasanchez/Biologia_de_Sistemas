@@ -2,14 +2,17 @@
 
 En este apartado se explicará los diferentes métodos que se han seguido a lo largo del proceso de análisis de la formación de un trombo arterial investigando las interacciones entre los genes que intervienen en la enfermedad.
 
-\subsection{}
 \subsection{Obtención de proteínas y genes asociados}
 
-El primer paso fue obtener los genes participantes en la trombosis arterial. Para ello primero tuvimos que apoyarnos en el \textit{HPO} de la enfermedad {ref: \cite{HPO} para obtener el listado de 25 genes. Posteriormente, nos apoyamos en la web de \textit{STRING} (ref: \cite{STRING}) , en la que, tras pasar como parámetro el conjunto de genes anterior, obtuvimos una representación gráfica de las interacciones entre los 25 genes. El resultado obtenido fue el mostrado en la figura \ref{fig: Figura 2}. También desde STRING obtuvimos las interacciones entre genes y el grado de sus nodos(genes) en archivos \textit{.tsv} los cuales utilizaremos posteriormente para el desarrollo del código en \textit{R}. Se comentará más adelante en la sección \textit{Generación de análisis de red PPI}. \\
+El primer paso fue obtener los genes participantes en la trombosis arterial. Para ello primero tuvimos que apoyarnos en el \textit{HPO} de la enfermedad \cite{HPO} para obtener el listado de 25 genes. Posteriormente, nos apoyamos en la web de \textit{STRING} \cite{STRING} , en la que, tras pasar como parámetro el conjunto de genes anterior, obtuvimos una representación gráfica de las interacciones entre los 25 genes. El resultado obtenido fue el mostrado en la figura \ref{fig: Figura 2}. También desde STRING obtuvimos las interacciones entre genes y el grado de cada uno de ellos, los cuales utilizaremos posteriormente para el desarrollo del código. Se comentará más adelante en la sección \textit{Generación de análisis de red PPI}. \\
 
-\subsection{Búsqueda de enfermedades relacionadas}
-
-El segundo paso fue extraer las enfermedades asociadas a la trombosis arterial. Nos apoyamos en el \textit{HPO} de la enfermedad {ref: \cite{HPO} para ver el listado de enfermedades. También utilizamos la plataforma \textit{ORPHA} en la que pudimos encontrar información respecto a las enfermedades que nos resultaron más interesantes además de comunes. Estas fueron la \textit{Policitema Vera}(ref: \cite{Policitema_Vera}), \textit{Trombocitema Esencial}(ref: \cite{Trombocitema_Esencial}} y \textit{Trombocitema Familiar}(ref: \cite{Trombocitema_Familiar}). 
 
 	
-	\subsection{Generación de análisis de red PPI}
+\subsection{Generación de análisis de red PPI}
+Una vez obtenido los genes participantes en la trombosis arterial, comenzamos con nuestro análisis de red PPI. Para ello, primeramente hemos creado el grafo con los genes asociados y realizado un análisis del grafo con las funciones del paquete \textit{igraph} \cite{igraph}. 
+
+Tras el análisis del grado, hemos llevado a cabo una \textbf{proàgación de genes} a través de \textit{STRING} \cite{STRING}, para mejorar la conectividad de la red, además de evitar que posibles genes se encuentren desconectados de nuestro sistema a estudiar, haciendo que los análisis que realicemos sean más esclarecedores.  
+
+Tras esto, hemos utilizado el paquete \textit{linkcomm} \cite{linkcomm} para llevar a cabo un \textbf{análisis de las comunidades del sistema}, pudiendo determinar los genes que conectan comunidades, así como el tamaño de las distintas comunidades entre otros distintos análisis.
+
+Por último, hemos llevado a cabo un \textbf{análisis funcional} mediante el enriquecimiento con GO del paquete \textit{clusterProfiler} \cite{clusterProfiler} de los procesos biológicos en los que intervienen los genes integrantes de cada una de las distintas comunidades anteriormente obtenidas.  Así, hemos obtenido las distintas funciones biológicas que se llevan a cabo en el proceso de la trombosis arterial, además de poder mostrar que genes son partícipes de cada una de las fases de formación del trombo.
