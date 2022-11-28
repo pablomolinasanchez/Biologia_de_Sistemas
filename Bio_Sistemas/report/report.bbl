@@ -84,16 +84,14 @@ Triada de Virchow.
 \url{https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow}
 \end{botherref}
 \endbibitem
-
 %%% 5
 \bibitem{grafo}
 \begin{botherref}
 \oauthor{\bsnm{String}}:
 25 Human Gene.
-\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki}
+\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki/}
 \end{botherref}
 \endbibitem
-
 %%% 6
 \bibitem{JAK2}
 \begin{botherref}
@@ -106,7 +104,6 @@ Roles of JAK2 in Aging, Inflammation, Hematopoiesis and Malignant
 \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6721738/}
 \end{botherref}
 \endbibitem
-
 %%% 7
 \bibitem{STAT4}
 \begin{botherref}
@@ -120,7 +117,6 @@ STAT4.
 \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7097918/}
 \end{botherref}
 \endbibitem
-
 %%% 8
 \bibitem{IL10}
 \begin{botherref}
@@ -134,34 +130,30 @@ Regulation and Functions of the IL-10 Family of Cytokines in Inflammation and
 \url{https://www.annualreviews.org/doi/10.1146/annurev-immunol-031210-101312}
 \end{botherref}
 \endbibitem
-
 %%% 9
 \bibitem{Trombocitosis_Familiar}
 \begin{botherref}
 \oauthor{\bsnm{ORPHA}}:
 Trombocitosis Familiar.
-\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493}
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493/}
 \end{botherref}
 \endbibitem
-
 %%% 10
 \bibitem{Trombocitema_Esencial}
 \begin{botherref}
 \oauthor{\bsnm{ORPHA}}:
 Trombocitemia Esencial.
-\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599}
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599/}
 \end{botherref}
 \endbibitem
-
 %%% 11
 \bibitem{Policitema_Vera}
 \begin{botherref}
 \oauthor{\bsnm{ORPHA}}:
 Policitemia Vera.
-\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729}
+\url{https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729/}
 \end{botherref}
 \endbibitem
-
 %%% 12
 \bibitem{HPO}
 \begin{botherref}
@@ -170,24 +162,18 @@ The Formation of a Blood Clot Inside an Artery.
 \url{https://hpo.jax.org/app/browse/term/HP:0004420}
 \end{botherref}
 \endbibitem
-
 %%% 13
 \bibitem{STRING}
 \begin{botherref}
 \oauthor{\bsnm{STRING}}:
 25 Human Gene.
-\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki}
+\url{https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki/}
 \end{botherref}
 \endbibitem
-
 \end{thebibliography}
-
 \newcommand{\BMCxmlcomment}[1]{}
-
 \BMCxmlcomment{
-
 <refgrp>
-
 <bibl id="B1">
   <title><p>Trombosis Arterial</p></title>
   <aug>
@@ -195,7 +181,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://www.thrombosisadviser.com/es/professionals/base-de-conocimientos/fundamentos/trombosis-arterial</url>
 </bibl>
-
 <bibl id="B2">
   <title><p>Research Progress on the Relationship between Atherosclerosis and
   Inflammation</p></title>
@@ -211,7 +196,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163673/</url>
 </bibl>
-
 <bibl id="B3">
   <title><p>La aterosclerosis es lo que impulsa a los problemas
   cardíacos</p></title>
@@ -221,7 +205,6 @@ The Formation of a Blood Clot Inside an Artery.
   <pubdate>2015</pubdate>
   <url>https://www.hoydallas.com/index.php/vida-y-salud/nutricion/1833-la-aterosclerosis-es-lo-que-impulsa-a-los-problemas-cardiacos</url>
 </bibl>
-
 <bibl id="B4">
   <title><p>Triada de Virchow</p></title>
   <aug>
@@ -229,7 +212,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://es.wikipedia.org/wiki/Tr%C3%ADada_de_Virchow</url>
 </bibl>
-
 <bibl id="B5">
   <title><p>25 human gene</p></title>
   <aug>
@@ -237,7 +219,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki</url>
 </bibl>
-
 <bibl id="B6">
   <title><p>Roles of JAK2 in Aging, Inflammation, Hematopoiesis and Malignant
   Transformation</p></title>
@@ -249,7 +230,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6721738/</url>
 </bibl>
-
 <bibl id="B7">
   <title><p>STAT4</p></title>
   <aug>
@@ -262,7 +242,6 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7097918/</url>
 </bibl>
-
 <bibl id="B8">
   <title><p>Regulation and Functions of the IL-10 Family of Cytokines in
   Inflammation and Disease</p></title>
@@ -275,31 +254,27 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://www.annualreviews.org/doi/10.1146/annurev-immunol-031210-101312</url>
 </bibl>
-
 <bibl id="B9">
   <title><p>Trombocitosis Familiar</p></title>
   <aug>
     <au><cnm>ORPHA</cnm></au>
   </aug>
-  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493</url>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=71493/</url>
 </bibl>
-
 <bibl id="B10">
   <title><p>Trombocitemia Esencial</p></title>
   <aug>
     <au><cnm>ORPHA</cnm></au>
   </aug>
-  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599</url>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=3599/</url>
 </bibl>
-
 <bibl id="B11">
   <title><p>Policitemia Vera</p></title>
   <aug>
     <au><cnm>ORPHA</cnm></au>
   </aug>
-  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729</url>
+  <url>https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=ES&Expert=729/</url>
 </bibl>
-
 <bibl id="B12">
   <title><p>The formation of a blood clot inside an artery.</p></title>
   <aug>
@@ -307,14 +282,12 @@ The Formation of a Blood Clot Inside an Artery.
   </aug>
   <url>https://hpo.jax.org/app/browse/term/HP:0004420</url>
 </bibl>
-
 <bibl id="B13">
   <title><p>25 human gene</p></title>
   <aug>
     <au><cnm>STRING</cnm></au>
   </aug>
-  <url>https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki</url>
+  <url>https://string-db.org/cgi/network?taskId=bjMS6shQQE1T&sessionId=bY8Q8qM3soki/</url>
 </bibl>
-
 </refgrp>
 } % end of \BMCxmlcomment
