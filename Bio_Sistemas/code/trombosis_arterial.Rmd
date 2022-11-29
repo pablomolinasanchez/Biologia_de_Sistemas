@@ -120,8 +120,9 @@ LOs genes más importantes, ya que unen comunidades y son de gran interés e imp
 cc <- getCommunityCentrality(hits.network_lc)
 print(head(sort(cc, decreasing = TRUE)))
 png("04_lc_genes_mayor_cc.png")
-barplot(t(head(sort(cc, decreasing = TRUE))), xlab = "genes", ylab = "Community centrality", main = "Genes con mayor CC", ylim = c(0,10))
+barplot(t(head(sort(cc, decreasing= TRUE))), xlab = "genes", ylab = "Community centrality", main = "Genes con mayor CC", ylim = c(0,10))
 ```
+Podemos observar que tanto TP53 como AKT1 e IL10 (genes iniciales de la trombosis arterial) tienen una frecuencia bastante alta en la que cada gen aparece en todos los caminos más cortos entre dos nodos. Es decir, estos genes representan proteínas/procesos/iniciadores importantes en la formación de un trombo arterial. 
 ## COmunidades Independientes
 ```{r}
 
@@ -208,7 +209,7 @@ community_8<-bitr(community_8, fromType = "SYMBOL", toType = "ENTREZID", OrgDb =
 go_8<-overrep_enrichment_GO(community_8$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
 head(go_8)
 ```
-## Comunidad 9 
+## Comunidad 9 (independiente)
 ```{r}
 community_9<-getNodesIn(hits.network_lc, clusterids = c(9))
 community_9<-bitr(community_9, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
@@ -250,7 +251,7 @@ community_14<-bitr(community_14, fromType = "SYMBOL", toType = "ENTREZID", OrgDb
 go_14<-overrep_enrichment_GO(community_14$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
 head(go_14)
 ```
-## Comunidad 15 
+## Comunidad 15 (independiente)
 ```{r}
 community_15<-getNodesIn(hits.network_lc, clusterids = c(15))
 community_15<-bitr(community_15, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
