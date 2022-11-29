@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -219,6 +219,15 @@ doi:\doiurl{10.1016/j.xinn.2021.100141}
 \end{botherref}
 \endbibitem
 
+%%% 17
+\bibitem{DOSE}
+\begin{botherref}
+\oauthor{\bsnm{Yu}, \binits{M.G.}}:
+Type Package Title Disease Ontology Semantic and Enrichment Analysis.
+\url{https://git.bioconductor.org/packages/DOSE}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -388,6 +397,16 @@ doi:\doiurl{10.1016/j.xinn.2021.100141}
   <publisher>Cell Press</publisher>
   <pubdate>2021</pubdate>
   <volume>2</volume>
+</bibl>
+
+<bibl id="B17">
+  <title><p>Type Package Title Disease Ontology Semantic and Enrichment
+  analysis</p></title>
+  <aug>
+    <au><snm>Yu</snm><fnm>MG</fnm></au>
+  </aug>
+  <pubdate>2022</pubdate>
+  <url>https://git.bioconductor.org/packages/DOSE</url>
 </bibl>
 
 </refgrp>

@@ -49,6 +49,8 @@ Warning--entry type for "STRING" isn't style-file defined
 --line 62 of file bibliography.bib
 Warning--entry type for "igraph" isn't style-file defined
 --line 67 of file bibliography.bib
+Warning--entry type for "DOSE" isn't style-file defined
+--line 88 of file bibliography.bib
 Warning--entry type for "linkcomm" isn't style-file defined
 --line 94 of file bibliography.bib
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
@@ -58,45 +60,45 @@ Warning--to sort, need author or key in linkcomm
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 16 entries,
+You've used 17 entries,
             7128 wiz_defined-function locations,
-            1189 strings with 11490 characters,
-and the built_in function-call counts, 449668 in all, are:
-= -- 86494
-> -- 269
-< -- 84
-+ -- 55730
-- -- 166
-* -- 9294
-:= -- 76479
-add.period$ -- 15
-call.type$ -- 16
-change.case$ -- 212
-chr.to.int$ -- 17
-cite$ -- 20
-duplicate$ -- 1133
-empty$ -- 3732
-format.name$ -- 456
-if$ -- 116443
+            1194 strings with 11633 characters,
+and the built_in function-call counts, 513974 in all, are:
+= -- 99296
+> -- 279
+< -- 88
++ -- 64314
+- -- 177
+* -- 10244
+:= -- 87210
+add.period$ -- 16
+call.type$ -- 17
+change.case$ -- 227
+chr.to.int$ -- 18
+cite$ -- 21
+duplicate$ -- 1188
+empty$ -- 3934
+format.name$ -- 468
+if$ -- 133398
 int.to.chr$ -- 3
-int.to.str$ -- 33
-missing$ -- 548
-newline$ -- 386
-num.names$ -- 70
-pop$ -- 737
+int.to.str$ -- 35
+missing$ -- 578
+newline$ -- 404
+num.names$ -- 75
+pop$ -- 771
 preamble$ -- 1
-purify$ -- 62
-quote$ -- 32
-skip$ -- 52514
+purify$ -- 66
+quote$ -- 34
+skip$ -- 60457
 stack$ -- 0
-substring$ -- 42909
-swap$ -- 123
-text.length$ -- 222
+substring$ -- 48739
+swap$ -- 128
+text.length$ -- 240
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 489
+type$ -- 520
 warning$ -- 2
-while$ -- 443
+while$ -- 470
 width$ -- 0
-write$ -- 534
-(There were 17 warnings)
+write$ -- 556
+(There were 18 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.28)  29 NOV 2022 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.28)  29 NOV 2022 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,12 +336,12 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  4041 strings out of 475284
- 64895 string characters out of 2775520
- 419103 words of memory out of 3000000
+ 64917 string characters out of 2775520
+ 418107 words of memory out of 3000000
  25456 multiletter control sequences out of 15000+600000
  476691 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,67p,1038b,515s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,9n,67p,1038b,513s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmr10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -351,7 +351,7 @@ c/amsfonts/cm/cmss17.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1
 type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Pc/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (5 pages, 398781 bytes).
+Output written on report.pdf (5 pages, 399445 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -8,11 +8,11 @@ El primer paso fue obtener los genes participantes en la trombosis arterial. Par
 
 
 
-\subsection{Generación de análisis de red PPI}
-Una vez obtenido los genes participantes en la trombosis arterial, comenzamos con nuestro análisis de red PPI. Para ello, primeramente hemos creado el grafo con los genes asociados y realizado un análisis del grafo con las funciones del paquete \textit{igraph} \cite{igraph}. 
+\subsection{Generación y análisis de red PPI}
+Una vez obtenido los genes participantes en la trombosis arterial, comenzamos con nuestro análisis de red PPI. Para ello, primeramente hemos creado el grafo con los genes asociados y realizado un análisis del grado con las funciones del paquete \textit{igraph} \cite{igraph} . 
 
-Tras el análisis del grado, hemos llevado a cabo una \textbf{proàgación de genes} a través de \textit{STRING} \cite{STRING}, para mejorar la conectividad de la red, además de evitar que posibles genes se encuentren desconectados de nuestro sistema a estudiar, haciendo que los análisis que realicemos sean más esclarecedores.  
+Tras el análisis del grado, hemos llevado a cabo una \textbf{propagación de genes} a través de \textit{STRING} \cite{STRING}, para mejorar la conectividad de la red, además de evitar que posibles genes se encuentren desconectados de nuestro sistema a estudiar, haciendo que los análisis que realicemos sean más esclarecedores, ya que tenemos una mejor visión del contexto de la enfermedad. 
 
-Tras esto, hemos utilizado el paquete \textit{linkcomm} \cite{linkcomm} para llevar a cabo un \textbf{análisis de las comunidades del sistema}, pudiendo determinar los genes que conectan comunidades, así como el tamaño de las distintas comunidades entre otros distintos análisis.
+Tras esto, hemos utilizado el paquete \textit{linkcomm} \cite{linkcomm} para llevar a cabo un \textbf{análisis de las comunidades del sistema}, pudiendo determinar los genes que conectan comunidades, así como el tamaño de ellas entre otros distintos análisis que explicaremos en profundidad en la sección \textit{Resultados} .
 
-Por último, hemos llevado a cabo un \textbf{análisis funcional} mediante el enriquecimiento con GO del paquete \textit{clusterProfiler} \cite{clusterProfiler} de los procesos biológicos en los que intervienen los genes integrantes de cada una de las distintas comunidades anteriormente obtenidas.  Así, hemos obtenido las distintas funciones biológicas que se llevan a cabo en el proceso de la trombosis arterial, además de poder mostrar que genes son partícipes de cada una de las fases de formación del trombo.
+Por último, hemos llevado a cabo un \textbf{análisis funcional} mediante el enriquecimiento con GO del paquete \textit{clusterProfiler} \cite{clusterProfiler} de los procesos biológicos en los que intervienen los genes integrantes de cada una de las distintas comunidades anteriormente obtenidas, apoyándonos en el conjunto genómico del \textit{Homo Sapiens Sapiens} del paquete \textit{DOSE} \cite{DOSE}.  Así, hemos obtenido las distintas funciones biológicas que se llevan a cabo en el proceso de la trombosis arterial, además de poder mostrar que genes son partícipes de cada una de las fases de formación del trombo.
