@@ -42,7 +42,7 @@ El primer paso fue obtener los genes participantes en la trombosis arterial. Par
 \subsubsection{Generación y análisis de red PPI}
 Una vez obtenido los genes participantes en la trombosis arterial, comenzamos con nuestro análisis de red PPI. Para ello, primeramente hemos creado el grafo con los genes asociados y realizado un \textit{análisis del grado} con las funciones del paquete \textit{igraph} \cite{igraph}. \\
 
-Tras el análisis del grado, hemos llevado a cabo una \textbf{propagación de genes} a través de \textit{STRING} \cite{STRING}, para mejorar la conectividad de la red, además de evitar que posibles genes se encuentren desconectados de nuestro sistema a estudiar, haciendo que los análisis que realicemos sean más esclarecedores, ya que tenemos una mejor visión del contexto de la enfermedad. \\
+Tras el análisis del grado, hemos llevado a cabo una \textbf{propagación de genes} a través de \textit{STRING} \cite{STRING} con un número máximo de 45 genes semilla nuevos con una confianza media de 0,4. El objetivo de realizar la propagación de genes es mejorar la conectividad de la red, además de evitar que posibles genes se encuentren desconectados de nuestro sistema a estudiar, haciendo que los análisis que realicemos sean más esclarecedores, ya que tenemos una mejor visión del contexto de la enfermedad. \\
 
 Tras esto, hemos utilizado el paquete \textit{linkcomm} \cite{linkcomm} para llevar a cabo un \textbf{análisis de las comunidades del sistema}, pudiendo determinar los genes que conectan comunidades, así como el tamaño de ellas entre otros distintos análisis que explicaremos en profundidad en la sección \textit{Resultados} .\\
 
