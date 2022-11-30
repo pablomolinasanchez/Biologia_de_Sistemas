@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  30 NOV 2022 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  30 NOV 2022 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,7 +438,8 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 36--44
 []$[]$ 
  []
 
-<figures/05_Comunidades_Independientes.png, id=33, 481.8pt x 481.8pt>
+[7 <./figures/01_NetworkComunidades.png (PNG copy)>]
+<figures/05_Comunidades_Independientes.png, id=37, 481.8pt x 481.8pt>
 File: figures/05_Comunidades_Independientes.png Graphic file (type png)
 <use figures/05_Comunidades_Independientes.png>
 Package pdftex.def Info: figures/05_Comunidades_Independientes.png  used on inp
@@ -449,10 +450,6 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 48--56
 []$[]$ 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./figures/01_NetworkComunidades.png (PNG copy)>]
 <figures/03_GenesMasCOnectadosOtrasComunidades.png, id=38, 481.8pt x 481.8pt>
 File: figures/03_GenesMasCOnectadosOtrasComunidades.png Graphic file (type png)
 
@@ -465,8 +462,10 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 60--68
 []$[]$ 
  []
 
-[8 <./figures/05_Comunidades_Independientes.png (PNG copy)> <./figures/03_Genes
-MasCOnectadosOtrasComunidades.png (PNG copy)>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./figures/05_Comunidades_Independientes.png (PNG copy)>]
 <figures/04_GenesMayorCentralidad.png, id=42, 481.8pt x 481.8pt>
 File: figures/04_GenesMayorCentralidad.png Graphic file (type png)
 <use figures/04_GenesMayorCentralidad.png>
@@ -478,8 +477,11 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 72--80
 []$[]$ 
  []
 
-) (tex_files/discusion.tex) (tex_files/conclusiones.tex) (report.bbl [9 <./figu
-res/04_GenesMayorCentralidad.png>]) 
+) (tex_files/discusion.tex) (tex_files/conclusiones.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./figures/03_GenesMasCOnectadosOtrasComunidades.png (PNG copy)> <./figures
+/04_GenesMayorCentralidad.png>] (report.bbl) 
 AED: lastpage setting LastPage
 [10] (report.aux)
 
@@ -493,11 +495,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  6568 strings out of 475284
  121502 string characters out of 2773160
- 471490 words of memory out of 3000000
+ 476490 words of memory out of 3000000
  27949 multiletter control sequences out of 15000+600000
  476397 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,1038b,515s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,1038b,463s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmr10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -508,7 +510,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/U
 suario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmtt8.pfb>
-Output written on report.pdf (10 pages, 1002286 bytes).
+Output written on report.pdf (10 pages, 1002096 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
