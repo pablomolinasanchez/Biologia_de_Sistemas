@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  30 NOV 2022 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  30 NOV 2022 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,6 +260,9 @@ See the caption package documentation for explanation.
 
 \c@caption@flags=\count280
 \c@continuedfloat=\count281
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 ) (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count282
@@ -271,20 +274,20 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
@@ -313,31 +316,31 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 29.
+(lastpage)             ! on input line 30.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
-(Font)              size <12> substituted on input line 34.
+(Font)              size <12> substituted on input line 35.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 40.
+(Font)              size <24.88> substituted on input line 41.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 52.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 \address@aff1=\toks38
 (tex_files/introduction.tex
@@ -431,57 +434,58 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 24--32
 File: figures/01_NetworkComunidades.png Graphic file (type png)
 <use figures/01_NetworkComunidades.png>
 Package pdftex.def Info: figures/01_NetworkComunidades.png  used on input line 
-40.
+41.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 36--44
+Overfull \hbox (8.0pt too wide) in paragraph at lines 37--45
 []$[]$ 
  []
 
-[7 <./figures/01_NetworkComunidades.png (PNG copy)>]
-<figures/05_Comunidades_Independientes.png, id=37, 481.8pt x 481.8pt>
+<figures/05_Comunidades_Independientes.png, id=33, 481.8pt x 481.8pt>
 File: figures/05_Comunidades_Independientes.png Graphic file (type png)
 <use figures/05_Comunidades_Independientes.png>
 Package pdftex.def Info: figures/05_Comunidades_Independientes.png  used on inp
-ut line 52.
+ut line 54.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 48--56
+Overfull \hbox (8.0pt too wide) in paragraph at lines 50--58
 []$[]$ 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./figures/01_NetworkComunidades.png (PNG copy)>]
 <figures/03_GenesMasCOnectadosOtrasComunidades.png, id=38, 481.8pt x 481.8pt>
 File: figures/03_GenesMasCOnectadosOtrasComunidades.png Graphic file (type png)
 
 <use figures/03_GenesMasCOnectadosOtrasComunidades.png>
 Package pdftex.def Info: figures/03_GenesMasCOnectadosOtrasComunidades.png  use
-d on input line 64.
+d on input line 70.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 60--68
+Overfull \hbox (8.0pt too wide) in paragraph at lines 66--74
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./figures/05_Comunidades_Independientes.png (PNG copy)>]
+ [8 <./figures/05_Comunidades_Independientes.png (PNG copy)> <./figures/03_Gene
+sMasCOnectadosOtrasComunidades.png (PNG copy)>]
 <figures/04_GenesMayorCentralidad.png, id=42, 481.8pt x 481.8pt>
 File: figures/04_GenesMayorCentralidad.png Graphic file (type png)
 <use figures/04_GenesMayorCentralidad.png>
 Package pdftex.def Info: figures/04_GenesMayorCentralidad.png  used on input li
-ne 76.
+ne 82.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 72--80
+Overfull \hbox (8.0pt too wide) in paragraph at lines 78--86
 []$[]$ 
  []
 
-) (tex_files/discusion.tex) (tex_files/conclusiones.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <./figures/03_GenesMasCOnectadosOtrasComunidades.png (PNG copy)> <./figures
-/04_GenesMayorCentralidad.png>] (report.bbl) 
+) (tex_files/discusion.tex) (tex_files/conclusiones.tex) (report.bbl [9 <./figu
+res/04_GenesMayorCentralidad.png>]) 
 AED: lastpage setting LastPage
 [10] (report.aux)
 
@@ -493,13 +497,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6568 strings out of 475284
- 121502 string characters out of 2773160
- 476490 words of memory out of 3000000
- 27949 multiletter control sequences out of 15000+600000
+ 6611 strings out of 475284
+ 122536 string characters out of 2773160
+ 471490 words of memory out of 3000000
+ 27988 multiletter control sequences out of 15000+600000
  476397 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,1038b,463s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,1038b,515s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmr10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -510,7 +514,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/U
 suario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmtt8.pfb>
-Output written on report.pdf (10 pages, 1002096 bytes).
+Output written on report.pdf (10 pages, 1002273 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
