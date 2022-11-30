@@ -42,21 +42,16 @@ net <- graph_from_data_frame(d=links,vertices=nodes, directed=T)
 ## Genes involucrados y sus iteracciones
 ```{r}
 V(net)$size<-V(net)$node_degree
+png("../results/Análisis_Grado/01_NetworkGenesInvolucrados.png")
 plot(net,layout=layout_nicely, edge.arrow.size=0.2, edge.curved=0.1, vertex.frame.color="black",vertex.label=V(net)$id, vertex.label.color="black", vertex.label.cex=0.7)
 ```
-## ¿Cuál es su matriz de adyacencia?
-```{r}
-adjacency_matrix <- as_adj(net)
-adjacency_matrix
-```
-
-
-Es un valor bastante bajo, por lo que podemos determinar que está altamente conectado
 
 ## ¿Cuál es el gen con más grado y, por tanto, con más conexiones y más relevante para la trombosis arterial?
 ```{r}
 degreeMax<-max(V(net)$node_degree)
-V(net)$name[V(net)$node_degree==degreeMax]
+dir <- paste("../results/Análisis_Grado/02_GenMayorGrado.txt", sep = "")
+mayor_grado<-V(net)$name[V(net)$node_degree==degreeMax]
+write.table(mayor_grado,dir)
 ```
 
 Vemos que el IL10 es el gen con más grado y por tanto más importante
@@ -70,6 +65,7 @@ ew <- rep(2, ecount(net))
 ew[unlist(news.path$epath)] <- 4
 vcol <- rep("gray40", vcount(net))
 vcol[unlist(news.path$vpath)] <- "gold"
+png("../results/Análisis_Grado/03_MayorRelacionConIL10.png")
 plot(net,layout=layout_nicely, vertex.color=vcol, edge.color=ecol, edge.width=ew, edge.arrow.mode=0)
 ```
 El gen que guarda mayor relación con IL10 es AKT1
@@ -95,12 +91,12 @@ lc
 # get the linkcomms
 hits.network_lc <- getLinkCommunities(lc , hcmethod = "single")
 print(hits.network_lc)
-png("01_lc_hits.network_layout_fruchterman.reingold.png")
+png("../results/Análisis_Comunidades/01_NetworkComunidades.png")
 plot(hits.network_lc, type = "graph", layout = layout.fruchterman.reingold, ewidth = 2, vlabel.cex = 0.5)
 ```
 ## Comunidades más grandes
 ```{r}
-png("02_lc_clusters_mayor_tama?o.png")
+png("../results/Análisis_Comunidades/02_ComunidadesMayorTamano.png")
 par(mfrow = c(2,1))
 pie(hits.network_lc$clustsizes[hits.network_lc$clustsizes > 8], radius = 1, main = "Tama?os de las comunidades m?s grandes")
 barplot(hits.network_lc$clustsizes[hits.network_lc$clustsizes > 8], xlab = "Comunidades", ylab = "Tama?o (num genes)")
@@ -109,7 +105,7 @@ par(mfrow = c(1,1))
 ## Genes más conectados con otras comunidades
 ```{r, warning=FALSE,message=FALSE}
 
-png("03_lc_community_membership_top-connected_nodes.png")
+png("../results/Análisis_Comunidades/03_GenesMasCOnectadosOtrasComunidades.png")
 plot(hits.network_lc, type = "members")
 
 ```
@@ -119,8 +115,9 @@ LOs genes más importantes, ya que unen comunidades y son de gran interés e imp
 ```{r}
 cc <- getCommunityCentrality(hits.network_lc)
 print(head(sort(cc, decreasing = TRUE)))
-png("04_lc_genes_mayor_cc.png")
+png("../results/Análisis_Comunidades/04_GenesMayorCentralidad.png")
 barplot(t(head(sort(cc, decreasing= TRUE))), xlab = "genes", ylab = "Community centrality", main = "Genes con mayor CC", ylim = c(0,10))
+
 ```
 Podemos observar que tanto TP53 como AKT1 e IL10 (genes iniciales de la trombosis arterial) tienen una frecuencia bastante alta en la que cada gen aparece en todos los caminos más cortos entre dos nodos. Es decir, estos genes representan proteínas/procesos/iniciadores importantes en la formación de un trombo arterial. 
 ## COmunidades Independientes
@@ -128,7 +125,7 @@ Podemos observar que tanto TP53 como AKT1 e IL10 (genes iniciales de la trombosi
 
 # Nested communities: Son aquellas comunidades que son independientes respecto a otras
 getAllNestedComm(hits.network_lc)
-png("05_lc_nested_communities.png")
+png("../results/Análisis_Comunidades/05_Comunidades_Independientes.png")
 plot(hits.network_lc, type = "graph", clusterids = c(9, 15))
 ```
 Las comunidades 9 y 15 son las únicas comunidades independientes de nuestra enfermedad, lo que hace que...
@@ -156,6 +153,8 @@ overrep_enrichment_GO <- function(gene,universe,Db, ont, pAdjustMethod, p,q) {
 community_1<-getNodesIn(hits.network_lc, clusterids = c(1))
 community_1<-bitr(community_1, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_1<-overrep_enrichment_GO(community_1$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_1.csv", sep = "")
+write.csv(go_1, dir)
 head(go_1)
 ```
 
@@ -164,6 +163,8 @@ head(go_1)
 community_2<-getNodesIn(hits.network_lc, clusterids = c(2))
 community_2<-bitr(community_2, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_2<-overrep_enrichment_GO(community_2$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_2.csv", sep = "")
+write.csv(go_2, dir)
 head(go_2)
 ```
 
@@ -172,6 +173,8 @@ head(go_2)
 community_3<-getNodesIn(hits.network_lc, clusterids = c(3))
 community_3<-bitr(community_3, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_3<-overrep_enrichment_GO(community_3$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_3.csv", sep = "")
+write.csv(go_3, dir)
 head(go_3)
 ```
 ## Comunidad 4 
@@ -179,6 +182,8 @@ head(go_3)
 community_4<-getNodesIn(hits.network_lc, clusterids = c(4))
 community_4<-bitr(community_4, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_4<-overrep_enrichment_GO(community_4$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_4.csv", sep = "")
+write.csv(go_4, dir)
 head(go_4)
 ```
 ## Comunidad 5 
@@ -186,6 +191,8 @@ head(go_4)
 community_5<-getNodesIn(hits.network_lc, clusterids = c(5))
 community_5<-bitr(community_5, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_5<-overrep_enrichment_GO(community_5$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_5.csv", sep = "")
+write.csv(go_5, dir)
 head(go_5)
 ```
 ## Comunidad 6 
@@ -193,6 +200,8 @@ head(go_5)
 community_6<-getNodesIn(hits.network_lc, clusterids = c(6))
 community_6<-bitr(community_6, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_6<-overrep_enrichment_GO(community_6$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_6.csv", sep = "")
+write.csv(go_6, dir)
 head(go_6)
 ```
 ## Comunidad 7 
@@ -200,6 +209,8 @@ head(go_6)
 community_7<-getNodesIn(hits.network_lc, clusterids = c(7))
 community_7<-bitr(community_7, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_7<-overrep_enrichment_GO(community_7$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_7.csv", sep = "")
+write.csv(go_7, dir)
 head(go_7)
 ```
 ## Comunidad 8 
@@ -207,6 +218,8 @@ head(go_7)
 community_8<-getNodesIn(hits.network_lc, clusterids = c(8))
 community_8<-bitr(community_8, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_8<-overrep_enrichment_GO(community_8$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_8.csv", sep = "")
+write.csv(go_8, dir)
 head(go_8)
 ```
 ## Comunidad 9 (independiente)
@@ -214,6 +227,8 @@ head(go_8)
 community_9<-getNodesIn(hits.network_lc, clusterids = c(9))
 community_9<-bitr(community_9, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_9<-overrep_enrichment_GO(community_9$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_9.csv", sep = "")
+write.csv(go_9, dir)
 head(go_9)
 ```
 ## Comunidad 10 
@@ -221,6 +236,8 @@ head(go_9)
 community_10<-getNodesIn(hits.network_lc, clusterids = c(10))
 community_10<-bitr(community_10, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_10<-overrep_enrichment_GO(community_10$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_10.csv", sep = "")
+write.csv(go_10, dir)
 head(go_10)
 ```
 ## Comunidad 11 
@@ -228,6 +245,8 @@ head(go_10)
 community_11<-getNodesIn(hits.network_lc, clusterids = c(11))
 community_11<-bitr(community_11, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_11<-overrep_enrichment_GO(community_11$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_11.csv", sep = "")
+write.csv(go_11, dir)
 head(go_11)
 ```
 ## Comunidad 12 
@@ -235,6 +254,8 @@ head(go_11)
 community_12<-getNodesIn(hits.network_lc, clusterids = c(12))
 community_12<-bitr(community_12, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_12<-overrep_enrichment_GO(community_12$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_12.csv", sep = "")
+write.csv(go_12, dir)
 head(go_12)
 ```
 ## Comunidad 13 
@@ -242,6 +263,8 @@ head(go_12)
 community_13<-getNodesIn(hits.network_lc, clusterids = c(13))
 community_13<-bitr(community_13, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_13<-overrep_enrichment_GO(community_13$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_13.csv", sep = "")
+write.csv(go_13, dir)
 head(go_13)
 ```
 ## Comunidad 14 
@@ -249,6 +272,8 @@ head(go_13)
 community_14<-getNodesIn(hits.network_lc, clusterids = c(14))
 community_14<-bitr(community_14, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_14<-overrep_enrichment_GO(community_14$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_14.csv", sep = "")
+write.csv(go_14, dir)
 head(go_14)
 ```
 ## Comunidad 15 (independiente)
@@ -256,6 +281,8 @@ head(go_14)
 community_15<-getNodesIn(hits.network_lc, clusterids = c(15))
 community_15<-bitr(community_15, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_15<-overrep_enrichment_GO(community_15$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_15.csv", sep = "")
+write.csv(go_15, dir)
 head(go_15)
 ```
 ## Comunidad 16 
@@ -263,6 +290,8 @@ head(go_15)
 community_16<-getNodesIn(hits.network_lc, clusterids = c(16))
 community_16<-bitr(community_16, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_16<-overrep_enrichment_GO(community_16$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_16.csv", sep = "")
+write.csv(go_16, dir)
 head(go_16)
 ```
 ## Comunidad 17 
@@ -270,6 +299,8 @@ head(go_16)
 community_17<-getNodesIn(hits.network_lc, clusterids = c(17))
 community_17<-bitr(community_17, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_17<-overrep_enrichment_GO(community_17$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_17.csv", sep = "")
+write.csv(go_17, dir)
 head(go_17)
 ```
 ## Comunidad 18 
@@ -277,6 +308,8 @@ head(go_17)
 community_18<-getNodesIn(hits.network_lc, clusterids = c(18))
 community_18<-bitr(community_18, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = org.Hs.eg.db)
 go_18<-overrep_enrichment_GO(community_18$ENTREZID,geneList,org.Hs.eg.db,"BP","BH",0.05,0.05)
+dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_18.csv", sep = "")
+write.csv(go_18, dir)
 head(go_18)
 ```
 # Estudio de la robustez {.tabset}
