@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  30 NOV 2022 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11) (preloaded format=pdflatex 2022.11.25)  19 DEC 2022 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,60 +434,41 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 24--32
 File: figures/01_NetworkComunidades.png Graphic file (type png)
 <use figures/01_NetworkComunidades.png>
 Package pdftex.def Info: figures/01_NetworkComunidades.png  used on input line 
-41.
-(pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
-
-Overfull \hbox (8.0pt too wide) in paragraph at lines 37--45
-[]$[]$ 
- []
-
+42.
+(pdftex.def)             Requested size: 361.0pt x 361.01093pt.
 <figures/05_Comunidades_Independientes.png, id=33, 481.8pt x 481.8pt>
 File: figures/05_Comunidades_Independientes.png Graphic file (type png)
 <use figures/05_Comunidades_Independientes.png>
 Package pdftex.def Info: figures/05_Comunidades_Independientes.png  used on inp
-ut line 54.
+ut line 42.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 50--58
+Overfull \hbox (8.0pt too wide) in paragraph at lines 37--46
 []$[]$ 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./figures/01_NetworkComunidades.png (PNG copy)>]
-<figures/03_GenesMasCOnectadosOtrasComunidades.png, id=38, 481.8pt x 481.8pt>
+<figures/03_GenesMasCOnectadosOtrasComunidades.png, id=34, 481.8pt x 481.8pt>
 File: figures/03_GenesMasCOnectadosOtrasComunidades.png Graphic file (type png)
 
 <use figures/03_GenesMasCOnectadosOtrasComunidades.png>
 Package pdftex.def Info: figures/03_GenesMasCOnectadosOtrasComunidades.png  use
-d on input line 70.
+d on input line 62.
 (pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 66--74
+Overfull \hbox (8.0pt too wide) in paragraph at lines 58--66
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./figures/05_Comunidades_Independientes.png (PNG copy)> <./figures/03_Gene
-sMasCOnectadosOtrasComunidades.png (PNG copy)>]
-<figures/04_GenesMayorCentralidad.png, id=42, 481.8pt x 481.8pt>
-File: figures/04_GenesMayorCentralidad.png Graphic file (type png)
-<use figures/04_GenesMayorCentralidad.png>
-Package pdftex.def Info: figures/04_GenesMayorCentralidad.png  used on input li
-ne 82.
-(pdftex.def)             Requested size: 252.6989pt x 252.69882pt.
-
-Overfull \hbox (8.0pt too wide) in paragraph at lines 78--86
-[]$[]$ 
- []
-
-) (tex_files/discusion.tex) (tex_files/conclusiones.tex) (report.bbl [9 <./figu
-res/04_GenesMayorCentralidad.png>]) 
+ [7 <./figures/01_NetworkComunidades.png (PNG copy)> <./figures/05_Comunidades_
+Independientes.png (PNG copy)>]) (tex_files/discusion.tex) (tex_files/conclusio
+nes.tex)
+(report.bbl [8 <./figures/03_GenesMasCOnectadosOtrasComunidades.png (PNG copy)>
+]) 
 AED: lastpage setting LastPage
-[10] (report.aux)
+[9] (report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -497,10 +478,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6611 strings out of 475284
- 122536 string characters out of 2773160
+ 6602 strings out of 475284
+ 122232 string characters out of 2773160
  471490 words of memory out of 3000000
- 27988 multiletter control sequences out of 15000+600000
+ 27980 multiletter control sequences out of 15000+600000
  476397 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,10n,77p,1038b,515s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -514,9 +495,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/U
 suario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmtt8.pfb>
-Output written on report.pdf (10 pages, 1002344 bytes).
+Output written on report.pdf (9 pages, 996168 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
