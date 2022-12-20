@@ -1,0 +1,13 @@
+Comunidad formada por genes productores de proteínas relacionadas con la formación y regulación de glóbulos rojos.
+El gen EPOR proporciona instrucciones para producir una proteína llamada receptor de eritropoyetina. La eritropoyetina es una hormona que dirige la producción de nuevos glóbulos rojos (eritrocitos) en la médula ósea.
+El gen THPO proporciona instrucciones para producir una proteína llamada trombopoyetina, La trombopoyetina es especialmente importante para la proliferación de ciertas células sanguíneas llamadas megacariocitos, que producen plaquetas, las células involucradas en la coagulación de la sangre.
+MPL es un gen que produce una proteína que ayuda a controlar la cantidad de glóbulos que se producen en la médula ósea, especialmente las plaquetas.
+[1215]
+SH2B3 es un importante regulador de la proliferación y la diferenciación. SH2B3 se identificó por primera vez en las células T ( 11 ) y desde entonces se ha descubierto que funciona en todas las células derivadas de las células madre hematopoyéticas.
+[1216]
+Y LEPR produce leptina, proteina involucrada con el peso corporal y usada para controlar la saciedad del cuerpo (hambre y sed)
+
+CALR Se han encontrado mutaciones del gen CALR en algunos tipos de afecciones de la sangre, incluida la trombocitemia esencial y la mielofibrosis primaria. produce una proteína que está involucrada en muchas funciones celulares.
+HSP90B1 facilitar el plegamiento de proteínas, el control de calidad en el retículo endoplásmico (ER) y la regulación de Ca 2+ en las células.
+PDIA3 modular el plegamiento de glicoproteínas recién sintetizadas
+P4HB este gen codifica la subunidad beta de la prolil 4-hidroxilasa,
