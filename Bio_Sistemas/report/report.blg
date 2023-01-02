@@ -53,52 +53,65 @@ Warning--entry type for "DOSE" isn't style-file defined
 --line 88 of file bibliography.bib
 Warning--entry type for "linkcomm" isn't style-file defined
 --line 94 of file bibliography.bib
+Warning--entry type for "F2_F9" isn't style-file defined
+--line 97 of file bibliography.bib
+Warning--entry type for "SERPINC1" isn't style-file defined
+--line 107 of file bibliography.bib
+Warning--entry type for "TP53" isn't style-file defined
+--line 111 of file bibliography.bib
+Warning--entry type for "AKT1" isn't style-file defined
+--line 115 of file bibliography.bib
+Warning--entry type for "pathway" isn't style-file defined
+--line 119 of file bibliography.bib
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--to sort, need author or key in igraph
 Warning--to sort, need author or key in linkcomm
+Warning--to sort, need author or key in TP53
+Warning--to sort, need author or key in AKT1
+Warning--to sort, need author or key in SERPINC1
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 17 entries,
+You've used 22 entries,
             7128 wiz_defined-function locations,
-            1194 strings with 11633 characters,
-and the built_in function-call counts, 513974 in all, are:
-= -- 99296
-> -- 279
-< -- 88
-+ -- 64314
-- -- 177
-* -- 10244
-:= -- 87210
-add.period$ -- 16
-call.type$ -- 17
-change.case$ -- 227
-chr.to.int$ -- 18
-cite$ -- 21
-duplicate$ -- 1188
-empty$ -- 3934
-format.name$ -- 468
-if$ -- 133398
+            1212 strings with 12278 characters,
+and the built_in function-call counts, 661671 in all, are:
+= -- 128074
+> -- 319
+< -- 100
++ -- 83096
+- -- 215
+* -- 12972
+:= -- 112133
+add.period$ -- 21
+call.type$ -- 22
+change.case$ -- 287
+chr.to.int$ -- 23
+cite$ -- 32
+duplicate$ -- 1488
+empty$ -- 4893
+format.name$ -- 537
+if$ -- 171923
 int.to.chr$ -- 3
-int.to.str$ -- 35
-missing$ -- 578
-newline$ -- 404
-num.names$ -- 75
-pop$ -- 771
+int.to.str$ -- 45
+missing$ -- 744
+newline$ -- 487
+num.names$ -- 85
+pop$ -- 979
 preamble$ -- 1
-purify$ -- 66
-quote$ -- 34
-skip$ -- 60457
+purify$ -- 83
+quote$ -- 44
+skip$ -- 78012
 stack$ -- 0
-substring$ -- 48739
-swap$ -- 128
-text.length$ -- 240
+substring$ -- 62676
+swap$ -- 152
+text.length$ -- 307
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 520
-warning$ -- 2
-while$ -- 470
+type$ -- 675
+warning$ -- 5
+while$ -- 573
 width$ -- 0
-write$ -- 556
-(There were 18 warnings)
+write$ -- 665
+(There were 26 warnings)

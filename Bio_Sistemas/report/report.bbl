@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{17}
+\begin{thebibliography}{22}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -181,20 +181,6 @@ The Formation of a Blood Clot Inside an Artery.
 \endbibitem
 
 %%% 14
-\bibitem{igraph}
-\begin{botherref}
-Package 'igraph' Title Network Analysis and Visualization
-\end{botherref}
-\endbibitem
-
-%%% 15
-\bibitem{linkcomm}
-\begin{botherref}
-Linkcomm
-\end{botherref}
-\endbibitem
-
-%%% 16
 \bibitem{clusterProfiler}
 \begin{botherref}
 \oauthor{\bsnm{Wu}, \binits{T.}},
@@ -219,12 +205,74 @@ doi:\doiurl{10.1016/j.xinn.2021.100141}
 \end{botherref}
 \endbibitem
 
+%%% 15
+\bibitem{igraph}
+\begin{botherref}
+Package 'igraph' Title Network Analysis and Visualization
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem{linkcomm}
+\begin{botherref}
+Linkcomm
+\end{botherref}
+\endbibitem
+
 %%% 17
 \bibitem{DOSE}
 \begin{botherref}
 \oauthor{\bsnm{Yu}, \binits{M.G.}}:
 Type Package Title Disease Ontology Semantic and Enrichment Analysis.
 \url{https://git.bioconductor.org/packages/DOSE}
+\end{botherref}
+\endbibitem
+
+%%% 18
+\bibitem{TP53}
+\begin{botherref}
+TP53.
+\url{https://medlineplus.gov/genetics/gene/tp53/}
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem{AKT1}
+\begin{botherref}
+AKT1.
+\url{https://medlineplus.gov/genetics/gene/akt1/}
+\end{botherref}
+\endbibitem
+
+%%% 20
+\bibitem{pathway}
+\begin{botherref}
+\oauthor{\bsnm{Seif}, \binits{F.}},
+\oauthor{\bsnm{Khoshmirsafa}, \binits{M.}},
+\oauthor{\bsnm{Aazami}, \binits{H.}},
+\oauthor{\bsnm{Mohsenzadegan}, \binits{M.}},
+\oauthor{\bsnm{Sedighi}, \binits{G.}},
+\oauthor{\bsnm{Bahar}, \binits{M.}}:
+The Role of JAK-STAT Signaling Pathway and Its Regulators in the Fate of T
+  Helper Cells.
+\url{https://biosignaling.biomedcentral.com/articles/10.1186/s12964-017-0177-y}
+\end{botherref}
+\endbibitem
+
+%%% 21
+\bibitem{F2_F9}
+\begin{botherref}
+\oauthor{\bsnm{Soria}, \binits{J.M.}}:
+The Genetic Component of Disorders of Coagulation and Thrombosis.
+\url{https://www.revespcardiol.org/es-el-componente-genetico-alteraciones-coagulacion-articulo-S1131358709715055}
+\end{botherref}
+\endbibitem
+
+%%% 22
+\bibitem{SERPINC1}
+\begin{botherref}
+SERPINC1.
+\url{https://www.ncbi.nlm.nih.gov/gene/462}
 \end{botherref}
 \endbibitem
 
@@ -365,16 +413,6 @@ Type Package Title Disease Ontology Semantic and Enrichment Analysis.
 </bibl>
 
 <bibl id="B14">
-  <title><p>Package 'igraph' Title Network Analysis and
-  Visualization</p></title>
-  <pubdate>2022</pubdate>
-</bibl>
-
-<bibl id="B15">
-  <title><p>linkcomm</p></title>
-</bibl>
-
-<bibl id="B16">
   <title><p>clusterProfiler 4.0: A universal enrichment tool for interpreting
   omics data</p></title>
   <aug>
@@ -399,6 +437,16 @@ Type Package Title Disease Ontology Semantic and Enrichment Analysis.
   <volume>2</volume>
 </bibl>
 
+<bibl id="B15">
+  <title><p>Package 'igraph' Title Network Analysis and
+  Visualization</p></title>
+  <pubdate>2022</pubdate>
+</bibl>
+
+<bibl id="B16">
+  <title><p>linkcomm</p></title>
+</bibl>
+
 <bibl id="B17">
   <title><p>Type Package Title Disease Ontology Semantic and Enrichment
   analysis</p></title>
@@ -407,6 +455,44 @@ Type Package Title Disease Ontology Semantic and Enrichment Analysis.
   </aug>
   <pubdate>2022</pubdate>
   <url>https://git.bioconductor.org/packages/DOSE</url>
+</bibl>
+
+<bibl id="B18">
+  <title><p>TP53</p></title>
+  <url>https://medlineplus.gov/genetics/gene/tp53/</url>
+</bibl>
+
+<bibl id="B19">
+  <title><p>AKT1</p></title>
+  <url>https://medlineplus.gov/genetics/gene/akt1/</url>
+</bibl>
+
+<bibl id="B20">
+  <title><p>The role of JAK-STAT signaling pathway and its regulators in the
+  fate of T helper cells</p></title>
+  <aug>
+    <au><snm>Seif</snm><fnm>F</fnm></au>
+    <au><snm>Khoshmirsafa</snm><fnm>M</fnm></au>
+    <au><snm>Aazami</snm><fnm>H</fnm></au>
+    <au><snm>Mohsenzadegan</snm><fnm>M</fnm></au>
+    <au><snm>Sedighi</snm><fnm>G</fnm></au>
+    <au><snm>Bahar</snm><fnm>M</fnm></au>
+  </aug>
+  <url>https://biosignaling.biomedcentral.com/articles/10.1186/s12964-017-0177-y</url>
+</bibl>
+
+<bibl id="B21">
+  <title><p>The Genetic Component of Disorders of Coagulation and
+  Thrombosis</p></title>
+  <aug>
+    <au><snm>Soria</snm><fnm>JM</fnm></au>
+  </aug>
+  <url>https://www.revespcardiol.org/es-el-componente-genetico-alteraciones-coagulacion-articulo-S1131358709715055</url>
+</bibl>
+
+<bibl id="B22">
+  <title><p>SERPINC1</p></title>
+  <url>https://www.ncbi.nlm.nih.gov/gene/462</url>
 </bibl>
 
 </refgrp>
