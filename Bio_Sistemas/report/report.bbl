@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{22}
+\begin{thebibliography}{23}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -276,6 +276,16 @@ SERPINC1.
 \end{botherref}
 \endbibitem
 
+%%% 23
+\bibitem{THPO_MPL}
+\begin{botherref}
+\oauthor{\bsnm{Dasouki}, \binits{M.}},
+\oauthor{\bsnm{Saadi}, \binits{I.}}:
+THPO–MPL Pathway and Bone Marrow Failure.
+\url{https://www.sciencedirect.com/science/article/pii/S1658387614001071}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -493,6 +503,15 @@ SERPINC1.
 <bibl id="B22">
   <title><p>SERPINC1</p></title>
   <url>https://www.ncbi.nlm.nih.gov/gene/462</url>
+</bibl>
+
+<bibl id="B23">
+  <title><p>THPO–MPL pathway and bone marrow failure</p></title>
+  <aug>
+    <au><snm>Dasouki</snm><fnm>M</fnm></au>
+    <au><snm>Saadi</snm><fnm>I</fnm></au>
+  </aug>
+  <url>https://www.sciencedirect.com/science/article/pii/S1658387614001071</url>
 </bibl>
 
 </refgrp>

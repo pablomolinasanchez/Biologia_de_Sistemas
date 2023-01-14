@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.2)  2 JAN 2023 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.2)  14 JAN 2023 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,27 +463,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/01_NetworkComunidades.png (PNG copy)> <./figures/05_Comunidades_
 Independientes.png (PNG copy)>]) (tex_files/discusion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
@@ -500,13 +505,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6607 strings out of 476406
- 121678 string characters out of 2789568
- 1863787 words of memory out of 3000000
- 26863 multiletter control sequences out of 15000+600000
+ 6608 strings out of 476406
+ 121688 string characters out of 2789568
+ 1866787 words of memory out of 3000000
+ 26864 multiletter control sequences out of 15000+600000
  519425 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,1120b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,1262b,519s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -516,7 +521,7 @@ TeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/pablo/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/pablo/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/pabl
 o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (10 pages, 1001614 bytes).
+Output written on report.pdf (10 pages, 1004998 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
