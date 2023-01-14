@@ -267,3 +267,10 @@ dir <- paste("../results/Enriquecimientos/Análisis_funcional_Comunidades_18.csv
 write.csv(go_18, dir)
 head(go_18)
 ```
+
+```{r}
+# para obtener todo el codigo R y montar el launch.sh ejecutamos lo siguiente
+#library(knitr)
+#purl("trombosis_arterial.Rmd")
+```
+
