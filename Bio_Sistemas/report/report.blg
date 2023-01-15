@@ -55,6 +55,8 @@ Warning--entry type for "linkcomm" isn't style-file defined
 --line 94 of file bibliography.bib
 Warning--entry type for "F2_F9" isn't style-file defined
 --line 97 of file bibliography.bib
+Warning--entry type for "PROS1" isn't style-file defined
+--line 102 of file bibliography.bib
 Warning--entry type for "SERPINC1" isn't style-file defined
 --line 107 of file bibliography.bib
 Warning--entry type for "TP53" isn't style-file defined
@@ -65,6 +67,12 @@ Warning--entry type for "pathway" isn't style-file defined
 --line 119 of file bibliography.bib
 Warning--entry type for "THPO_MPL" isn't style-file defined
 --line 124 of file bibliography.bib
+Repeated entry---line 129 of file bibliography.bib
+ : @web_page{PROS1
+ :                ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "SH2B3" isn't style-file defined
+--line 133 of file bibliography.bib
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--to sort, need author or key in igraph
@@ -75,45 +83,45 @@ Warning--to sort, need author or key in SERPINC1
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 23 entries,
+You've used 25 entries,
             7128 wiz_defined-function locations,
-            1217 strings with 12432 characters,
-and the built_in function-call counts, 700308 in all, are:
-= -- 135641
-> -- 335
-< -- 106
-+ -- 88071
-- -- 226
-* -- 13652
-:= -- 118643
-add.period$ -- 22
-call.type$ -- 23
-change.case$ -- 307
-chr.to.int$ -- 24
-cite$ -- 33
-duplicate$ -- 1551
-empty$ -- 5109
-format.name$ -- 561
-if$ -- 182029
+            1227 strings with 12829 characters,
+and the built_in function-call counts, 850581 in all, are:
+= -- 165321
+> -- 379
+< -- 119
++ -- 107900
+- -- 266
+* -- 16107
+:= -- 143884
+add.period$ -- 24
+call.type$ -- 25
+change.case$ -- 363
+chr.to.int$ -- 26
+cite$ -- 35
+duplicate$ -- 1709
+empty$ -- 5740
+format.name$ -- 639
+if$ -- 221461
 int.to.chr$ -- 3
-int.to.str$ -- 48
-missing$ -- 776
-newline$ -- 506
-num.names$ -- 90
-pop$ -- 1022
+int.to.str$ -- 52
+missing$ -- 848
+newline$ -- 552
+num.names$ -- 100
+pop$ -- 1123
 preamble$ -- 1
-purify$ -- 88
-quote$ -- 46
-skip$ -- 82645
+purify$ -- 96
+quote$ -- 50
+skip$ -- 100933
 stack$ -- 0
-substring$ -- 66264
-swap$ -- 158
-text.length$ -- 324
+substring$ -- 80063
+swap$ -- 178
+text.length$ -- 367
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 706
+type$ -- 768
 warning$ -- 5
-while$ -- 602
+while$ -- 681
 width$ -- 0
-write$ -- 691
-(There were 27 warnings)
+write$ -- 763
+(There was 1 error message)

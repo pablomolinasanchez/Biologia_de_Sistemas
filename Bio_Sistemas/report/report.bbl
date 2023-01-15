@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -277,12 +277,37 @@ SERPINC1.
 \endbibitem
 
 %%% 23
+\bibitem{PROS1}
+\begin{botherref}
+\oauthor{\bsnm{Heeb}, \binits{M.J.}}:
+Role of the PROS1 Gene in Thrombosis: Lessons and Controversies.
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2756703/}
+\end{botherref}
+\endbibitem
+
+%%% 24
 \bibitem{THPO_MPL}
 \begin{botherref}
 \oauthor{\bsnm{Dasouki}, \binits{M.}},
 \oauthor{\bsnm{Saadi}, \binits{I.}}:
 THPO–MPL Pathway and Bone Marrow Failure.
 \url{https://www.sciencedirect.com/science/article/pii/S1658387614001071}
+\end{botherref}
+\endbibitem
+
+%%% 25
+\bibitem{SH2B3}
+\begin{botherref}
+\oauthor{\bsnm{Hong}, \binits{L.}},
+\oauthor{\bsnm{Jiang}, \binits{Y.-F.}},
+\oauthor{\bsnm{Chen}, \binits{M.}},
+\oauthor{\bsnm{Zhang}, \binits{N.-N.}},
+\oauthor{\bsnm{Yang}, \binits{H.-J.}},
+\oauthor{\bsnm{Rui}, \binits{Q.}},
+\oauthor{\bsnm{Zhou}, \binits{Y.-F.}}:
+Role of SH2B3 R262W Gene Polymorphism and Risk of Coronary Heart Disease: A
+  PRISMA-compliant Meta-analysis.
+\url{https://pubmed.ncbi.nlm.nih.gov/30508957/}
 \end{botherref}
 \endbibitem
 
@@ -506,12 +531,36 @@ THPO–MPL Pathway and Bone Marrow Failure.
 </bibl>
 
 <bibl id="B23">
+  <title><p>Role of the PROS1 gene in thrombosis: lessons and
+  controversies</p></title>
+  <aug>
+    <au><snm>Heeb</snm><fnm>MJ</fnm></au>
+  </aug>
+  <url>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2756703/</url>
+</bibl>
+
+<bibl id="B24">
   <title><p>THPO–MPL pathway and bone marrow failure</p></title>
   <aug>
     <au><snm>Dasouki</snm><fnm>M</fnm></au>
     <au><snm>Saadi</snm><fnm>I</fnm></au>
   </aug>
   <url>https://www.sciencedirect.com/science/article/pii/S1658387614001071</url>
+</bibl>
+
+<bibl id="B25">
+  <title><p>Role of SH2B3 R262W gene polymorphism and risk of coronary heart
+  disease: A PRISMA-compliant meta-analysis</p></title>
+  <aug>
+    <au><snm>Hong</snm><fnm>L</fnm></au>
+    <au><snm>Jiang</snm><fnm>YF</fnm></au>
+    <au><snm>Chen</snm><fnm>M</fnm></au>
+    <au><snm>Zhang</snm><fnm>NN</fnm></au>
+    <au><snm>Yang</snm><fnm>HJ</fnm></au>
+    <au><snm>Rui</snm><fnm>Q</fnm></au>
+    <au><snm>Zhou</snm><fnm>YF</fnm></au>
+  </aug>
+  <url>https://pubmed.ncbi.nlm.nih.gov/30508957/</url>
 </bibl>
 
 </refgrp>
